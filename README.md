@@ -1,5 +1,5 @@
 <h1>UCLBattles</h1><br>
-<p>Este é o repositório do projeto individual de Pesquisa e Inovação, o objetivo desse projeto foi a construção de um site onde o usuário possa criar uma conta e um jogador virtual para comparar seus atributos/stats criados com as maiores referências do futebol mundial atualmente, especificamente aqueles que disputam a tão sonhada <strong>UEFA Champions League</strong o maior campeonato continental clubes do planeta.</p>
+<p>Este é o repositório do projeto individual de Pesquisa e Inovação, o objetivo desse projeto foi a construção de um site onde o usuário possa criar uma conta e um jogador virtual para comparar seus atributos/stats criados com as maiores referências do futebol mundial atualmente, especificamente aqueles que disputam a tão sonhada <strong>UEFA Champions League</strong o maior campeonato continental clubes do planeta, o projeto foi inteiramente organizado dentro da ferramenta de gestão de projetos 'Trello', adotando a metodologia SCRUM e seus princípios.</p>
 <p>Para a construção do projeto foi utilizado:</p>
 <li>HTML</li> 
 <li>CSS</li> 
