@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(6, 11, 43);
+    
+}
+
+p{
+    color: gold;
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+a {
+    flex-direction: row;
+    text-align: center;
+    color:gold;
+}
+
+span {
+    padding-top: 20px;
+    align-self: center;
+    font-family: 'Rajdhani', sans-serif;
+    color: rgb(174, 174, 173);
+}
+
+.title{
+    color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+}
+
+.title h1 {
+    margin: 0;
+
+}
+
+.title p{
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.navbar p {
+    color: white;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    align-items: center;
+    gap: 30px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo img{
+    width: 50px;
+    height: auto;
+    filter: invert(100%) brightness(200%)
+}
+
+.logo p{
+    color: white;
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.navbar button{
+    display: flex;;
+    color: gold;
+    background-color: #020b18;;
+    border: 0.5px solid gold;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    flex-direction: row;
+    justify-items: center;
+    font-family: 'Bebas Neue', cursive;
+    height: fit-content;
+    padding: 6px 30px;
+    transition: all 0.3s ease;
+}
+
+.navbar button:hover{
+    background-color: gold;
+    color: #020b18;
+    border-color: gold;
+}
+
+.navbar button:hover a{
+    transition: all 0.3s ease;
+    color: black;
+}
+
+.navbar a{
+    color: gold;
+    text-decoration: none;
+    margin-right: 20px;
+    padding-left: 20px;
+}
+.main{
+    display: flex;
+    margin: 0 auto;
+    font-family: 'Rajdhani', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 1000px;
+    border: 0.5px solid gold;
+    background: radial-gradient(ellipse at 50% 100%, #1a3a6b 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 0%, #0d2240 10%, transparent 50%), #020b18;
+    border-radius: 30px;
+}
+
+.field-group{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.stats-text p{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: gold;
+    width: 100%;
+    font-size: 18px;
+}
+
+.text-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 40px;
+    border: 1px solid gold;
+    background-color: #020b18;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.field-group input{
+    padding: 10px;
+    border: 1px solid gold;
+    border-radius: 5px;
+    background-color: #31312e;
+    font-family: 'Rajdhani', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+
+.field-group input::placeholder{
+    color: #ffffff
+}
+
+.form-player input {
+    padding: 6px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: rgba(0, 13, 97, 0.201);
+    font-family: 'Rajdhani', sans-serif;
+    color: white;
+    font-size: 15px;
+}
+
+.form-player input::placeholder{
+    color: #ffffff;
+}
+
+.form{ 
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    width: 100%;
+    padding: 70px;
+}
+
+.form-player{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-create{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-create button{
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid;;
+    border-radius: 8px;
+    border-color: white;
+    cursor: pointer;
+    size: 10px;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.button-create button:hover{
+    background-color: white;
+    color: #020b18;
+    border-color: white;
+}

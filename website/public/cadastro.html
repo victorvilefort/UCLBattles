@@ -1,11 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-bt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UCLBattles | Cadastro</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/cadastro.css">
 </head>
 <body>
-    <p>Hello World</p>
+    <div class="navbar">
+        <div class="logo">
+            <img src="./assets/img/UEFA_Champions_League.png" alt="">
+            <p>UCLBattles</p>
+        </div>
+        <button><a href="login.html">Login</a></button>
+        <button><a href="cadastro.html">Cadastro</a></button>
+        <button><a href="main.html">Principal</a></button>
+    </div>
+    <div class="main">
+    
+    <div class="title">
+        <h1>Criar Jogador</h1>
+        <p>Preencha seus dados</p>
+    </div>
+        <div class="text-card">
+            <p>⚡ Crie seu perfil e compare suas habilidades com os melhores do mundo!</p>
+        </div>
+        <div class="form">
+            <div class="field-group">
+            <div class="field">
+                <p>Nome:</p>
+                <input type="text" id="ipt_nome" placeholder="Seu nome"> 
+            </div>
+
+            <div class="field">
+                <p>Posição:</p>
+                <input type="text" id="ipt_posicao" placeholder="MEI / ATA / ZAG">
+            </div>
+
+            <div class="field">
+                <p>Email:</p>
+                <input type="text" id="ipt_email" placeholder="seuemail@exemplo.com">
+            </div>
+
+            <div class="field">
+                <p>Senha:</p>
+                <input type="text" id="_iptSenha" placeholder="*******">
+            </div>
+
+            <div class="field">
+                <p>Confirmar Senha:</p>
+                <input type="text" id="ipt_SenhaConf" placeholder="*******">
+            </div>
+        </div>
+        <div class="stats-text">
+            <p>Stats do jogador (0-99)</p>
+        </div>
+        <div class="form-player">
+            <div class="field">
+                <p>Drible:</p>
+                <input type="text" id="ipt_dri" placeholder="85">
+            </div>
+
+            <div class="field">
+                <p>Finalização:</p>
+                <input type="text" id="ipt_fin" placeholder="78">
+            </div>
+
+            <div class="field">
+                <p>Físico:</p>
+                <input type="text" id="ipt_fis" placeholder="72">
+            </div>
+
+            <div class="field">
+                <p>Passe:</p>
+                <input type="text" id="ipt_pas" placeholder="80">
+            </div>
+
+            <div class="field">
+                <p>Velocidade:</p>
+                <input type="text" id="ipt_vel" placeholder="88">
+            </div>
+
+            <div class="field">
+                <p>Defesa:</p>
+                <input type="text" id="ipt_def" placeholder="45">
+            </div>
+        </div>
+        <div class="button-create">
+            <button onclick="criarConta()">Criar conta e Jogar</button>
+        </div>
+        <span>Já tem conta? <a href="login.html">Fazer login</a></span>
+    </div>
+</div>
+</div>
+</div>
 </body>
 </html>

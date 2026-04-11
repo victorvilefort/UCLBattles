@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UCLBattles | Login</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <p>Hello, World</p>
+    <div class="navbar">
+        <a href="login.html">Login</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="main.html">Principal</a>
+    </div>
+    <div class="main">
+        <h1>UCLBattles</h1>
+        <p>CHAMPIONS LEAGUE EDITION</p>
+        <div class="forms">
+            <div class="fields">
+                <p>Email:</p>
+                <input type="text" id="ipt_email">
+                <p>Senha:</p>
+                <input type="text" id="ipt_senha">
+                <p>Esqueci minha senha</p>
+                <button onclick="pensar()">Entrar no campo</button>
+                <span>Não tem conta? <a href="cadastro.html">Criar agora</a></span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
