@@ -2,10 +2,13 @@
 
 *{
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body{
-    background-color: rgb(6, 11, 43);
+    background: radial-gradient(ellipse at 50% 100%, #1a3a6b 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 0%, #0e2d58 10%, transparent 50%), #00122b;
+    border-radius: 30px;
     
 }
 
@@ -96,7 +99,7 @@ span {
     justify-items: center;
     font-family: 'Bebas Neue', cursive;
     height: fit-content;
-    padding: 6px 30px;
+    padding: 7px 50px;
     transition: all 0.3s ease;
 }
 

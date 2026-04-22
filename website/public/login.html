@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +9,30 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="login.html">Login</a>
-        <a href="cadastro.html">Cadastro</a>
-        <a href="main.html">Principal</a>
+    <div class="logo">
+        <img src="assets/img/UEFA_Champions_League.png" alt="">
+         <p>UCLBattles</p>
+    </div>
+        <a href="login.html"><button>Login</button></a>
+        <a href="cadastro.html"><button>Cadastro</button></a>
+        <a href="home.html"><button>Página Inicial</button></a>
     </div>
     <div class="main">
-        <h1>UCLBattles</h1>
-        <p>CHAMPIONS LEAGUE EDITION</p>
+        <div class="title">
+               <h1>UCLBattles</h1>
+        </div>
+        <div class="text-card">
+             <p>⚡ Entre em campo e compare suas habilidades com os melhores do mundo!</p>
+        </div>
         <div class="forms">
             <div class="fields">
                 <p>Email:</p>
                 <input type="text" id="ipt_email">
                 <p>Senha:</p>
                 <input type="text" id="ipt_senha">
-                <p>Esqueci minha senha</p>
-                <button onclick="pensar()">Entrar no campo</button>
+                <div class="button-create">
+                     <button onclick="pensar()">Entrar no campo</button>
+                </div>
                 <span>Não tem conta? <a href="cadastro.html">Criar agora</a></span>
             </div>
         </div>

@@ -2,11 +2,13 @@
 
 *{
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body{
-    background-color: rgb(6, 11, 43);
-    
+    background: radial-gradient(ellipse at 50% 100%, #1a3a6b 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 0%, #0e2d58 10%, transparent 50%), #00122b;
+    border-radius: 30px;
 }
 
 h1{
@@ -26,7 +28,7 @@ h3 {
 }
 
 h5 {
-    color: grey;
+    color: rgb(255, 255, 255);
 }
 
 a {
@@ -39,23 +41,22 @@ span {
     padding-top: 20px;
     align-self: center;
     font-family: 'Rajdhani', sans-serif;
-    color: rgb(174, 174, 173);
+    color: rgb(255, 255, 255);
 }
 
 p{
-    color: grey;
+    color: rgb(255, 253, 253);
 }
 
 .header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border-bottom: 2px;
-    border-color: grey;
     margin: 0;
-    padding: 5px;
+    padding: 6px;
     align-items: center;
     text-decoration: none;
+    border-bottom: 1px solid gold;
 }
 
 .header h1{
@@ -68,7 +69,7 @@ p{
     display: flex;
     justify-self: center;
     font-family: 'Rajdhani', sans-serif;
-    color: rgb(174, 174, 173);
+    color: rgb(255, 255, 255);
     font-size: 20px;
 }
 
@@ -83,9 +84,8 @@ p{
     flex-direction: row;
     font-family: 'Bebas Neue', cursive;
     height: fit-content;
-    padding: 6px 30px;
+    padding: 6px 50px;
     transition: all 0.3s ease;
-    margin-top: 20px;
     text-decoration: none;
 }
 
@@ -128,28 +128,41 @@ p{
 }
 
 
-.main-title{
+.main-title {
     font-size: 40px;
-    padding-top: 1rem;
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.main-title h1{
+    padding-right: 10rem;
+}
+
+.main-title img{
+    display: flex;
+    width: 380px;
+    height: 400px;
+    padding-left: 6rem;
 }
 
 .main-subtitle{
-    color: grey;
+    color: rgb(255, 255, 255);
     font-family: 'Rajdhani', sans-serif;
     font-size: 20px;
 }
 
 .main-title white{
     color: white;
-    padding-bottom: 10px;
 }
 
 .footer{
+    padding-top: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    border-bottom: 2px;
-    border-color: grey;
+    justify-content: space-around;
+    border-top: 1px solid gold;
 }
 
 .mockplayers-content{
@@ -239,7 +252,7 @@ p{
 
 .step-box{
     border-style: solid;
-    border-color: #020b18;
+    border-color: white;
     border-radius: 10px;
     padding: 20px; 
 }
@@ -253,7 +266,7 @@ p{
 }
 
 .player-ovr{
-    color: grey;
+    color: rgb(255, 253, 253);
     display: flex;
     flex-direction: column;
     font-family: 'Rajdhani', sans-serif;
@@ -266,10 +279,11 @@ p{
     justify-content: space-between;
     align-items: center;
     height: fit-content;
-    padding: 40px;
-    background-color: #020b18;
+    padding: 20px;
+    background-color: #001635;
     border-radius: 20px;
     margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .banner button{
@@ -279,7 +293,7 @@ p{
     border: 0.5px solid gold;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px;
     flex-direction: row;
     font-family: 'Bebas Neue', cursive;
     height: fit-content;
@@ -289,12 +303,16 @@ p{
 
 .banner button:hover{
     background-color: gold;
-    color: #020b18;
+    color: #000000;
     border-color: gold;
 }
 
+.banner button:hover a{
+    color: #000000;
+}
+
 .main-estatics p {
-    color: grey;
+    color: rgb(255, 255, 255);
     font-family: 'Rajdhani', sans-serif;
     font-size: 20px;
 }
@@ -332,4 +350,10 @@ p{
     color: white;
     font-family: 'Bebas Neue', cursive;
     font-size: 20px;
+}
+
+.footer img {
+    width: 60px;
+    height: auto;
+    filter: invert(100%) brightness(200%)
 }
