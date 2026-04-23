@@ -1,16 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UCLBattles | Main</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
-</head>
-<body>
-    <div class="navbar">
-        <h1>UCLBattles</h1>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="header">
+        <div class="logo">
+          <img src="assets/img/UEFA_Champions_League.png" alt="" />
+          <a href="home.html"><h1>UCLBattles</h1></a>
+        </div>
+        <a href="profile.html"><button>Meu perfil</button></a>
+      </div>
+      <div class="text-enemy">
+        <h2>Selecione seu adversário</h2>
+      </div>
+      <div class="enemy">
+        <div class="box-player">
+          <img src="assets/img/messi.png" alt="" />
+          <div class="name-enemy"><p>Lionel Messi</p></div>
+          <div class="enemy-position"><p>Meia-Atacante</p></div>
+          <div class="enemy-overal"><h2>93</h2></div>
+        </div>
+        <div class="box-player">
+          <img src="assets/img/cr7.png" alt="" />
+          <div class="name-enemy"><p>Ronaldo</p></div>
+          <div class="enemy-position"><p>Atacante</p></div>
+          <div class="enemy-overal"><h2>90</h2></div>
+        </div>
+        <div class="box-player">
+          <img src="assets/img/mbappe.png" alt="" />
+          <div class="name-enemy"><p>Mbappé</p></div>
+          <div class="enemy-position"><p>Atacante</p></div>
+          <div class="enemy-overal"><h2>90</h2></div>
+        </div>
+        <div class="box-player">
+          <img src="assets/img/suarez.png" alt="" />
+          <div class="name-enemy"><p>Suarez</p></div>
+          <div class="enemy-position"><p>Atacante</p></div>
+          <div class="enemy-overal"><h2>89</h2></div>
+        </div>
+        <div class="box-player">
+          <img src="assets/img/neymar.png" alt="" />
+          <div class="name-enemy"><p>Neymar</p></div>
+          <div class="enemy-position"><p>Meia-Atacante</p></div>
+          <div class="enemy-overal"><h2>91</h2></div>
+        </div>
+        <div class="box-player">
+          <img src="assets/img/kane.png" alt="" />
+          <div class="name-enemy"><p>Harry Kane</p></div>
+          <div class="enemy-position"><p>Atacante</p></div>
+          <div class="enemy-overal"><h2>87</h2></div>
+        </div>
+        <div class="box-player">
+          <img src="assets/img/yamal.png" alt="" />
+          <div class="name-enemy"><p>Lamine Yamal</p></div>
+          <div class="enemy-position"><p>Meia-Atacante</p></div>
+          <div class="enemy-overal"><h2>86</h2></div>
+        </div>
+        <div class="box-player">
+          <img src="assets/img/olise.png" alt="" />
+          <div class="name-enemy"><p>Olise</p></div>
+          <div class="enemy-position"><p>Meia-Atacante</p></div>
+          <div class="enemy-overal"><h2>87</h2></div>
+        </div>
+      </div>
+
+      <div class="title-pvp">
+        <h2>Comparativo ao vivo</h2>
+      </div>
+      <div class="pvp">
+        <div class="box-player-big-blue">
+        <img src="assets/img/white-user-member-guest-icon-png-image-701751695037005zdurfaim0y.png" alt="" />
+          <div class="name-enemy"><p>Hero</p></div>
+          <div class="enemy-position"><p>Hero</p></div>
+          <div class="enemy-overal-big"><h2>X</h2></div>
+        </div>
+        <div class="banner-info-diff">
+          <span>Diferença geral</span>
+          <h3>-11 pontos</h3>
+        </div>
+
+        <div class="chart">
+             <canvas id="radarChart"></canvas>
+        </div>
         
+
+        <div class="banner-info-better">
+          <span>Melhor em</span>
+          <h3>Velocidade, físico, defesa</h3>
+        </div>
+        <div class="box-player-big-red">
+          <img src="assets/img/olise.png" alt="" />
+          <div class="name-enemy"><p>Olise</p></div>
+          <div class="enemy-position"><p>Meia-Atacante</p></div>
+          <div class="enemy-overal-big"><h2>87</h2></div>
+        </div>
+      </div>
     </div>
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     <script>
+      new Chart(document.getElementById('radarChart'), {
+        type: 'radar',
+        data: {
+          labels: ['Drible', 'Finalização', 'Físico', 'Passe', 'Velocidade', 'Defesa'],
+          datasets: [
+            {
+              label: 'Seu jogador',
+              data: [85, 80, 75, 90, 88, 70],
+              borderColor: '#FFD700',
+              backgroundColor: 'rgba(255, 215, 0, 0.15)',
+              pointBackgroundColor: '#FFD700',
+              borderWidth: 2,
+              pointRadius: 4,
+            },
+            {
+              label: 'Adversário',
+              data: [97, 92, 70, 94, 85, 38],
+              borderColor: '#00FFFF',
+              backgroundColor: 'rgba(0, 255, 255, 0.10)',
+              pointBackgroundColor: '#00FFFF',
+              borderWidth: 2,
+              pointRadius: 4,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: true } },
+          scales: {
+            r: {
+              min: 0,
+              max: 99,
+              ticks: { stepSize: 10, backdropColor: 'transparent' },
+               grid: {
+                 color: 'rgba(255, 255, 255, 0.4)'  // <- cor das linhas da grade
+                },
+            }
+          }
+        }
+      });
+    </script>
+  </body>
 </html>
