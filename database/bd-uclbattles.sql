@@ -1,6 +1,7 @@
-
 CREATE DATABASE uclbattles ;
 USE uclbattles ;
+
+-- TABELA QUE CONTÉM OS DADOS DOS JOGADORES MOCKADOS UTILIZADOS PARA A COMPARAÇÃO
 
 CREATE TABLE jogador_mockado(
   id_mockado INT NOT NULL AUTO_INCREMENT,
@@ -14,6 +15,8 @@ CREATE TABLE jogador_mockado(
   defesa INT NOT NULL,
   PRIMARY KEY (id_mockado));
 
+-- TABELA QUE CONTÉM OS STATS DO JOGADOR DO USUÁRIO
+
 CREATE TABLE stats_player(
   id_stats INT NOT NULL AUTO_INCREMENT,
   posicao VARCHAR(40) NOT NULL,
@@ -24,6 +27,8 @@ CREATE TABLE stats_player(
   velocidade INT NOT NULL,
   defesa INT NOT NULL,
   PRIMARY KEY (id_stats));
+
+-- TABELA QUE CONTÉM OS PAPEIS DE USUARIO E SUAS CREDENCIAIS
 
 CREATE TABLE user(
   id INT NOT NULL AUTO_INCREMENT,
@@ -40,6 +45,8 @@ CREATE TABLE user(
     CHECK (papel_user IN ('admin', 'common_user'))
 );
     
+-- INSERT NA TABELA DOS JOGADORES MOCKADOS
+
 INSERT INTO jogador_mockado 
 (id_mockado, nome, posicao, drible, finalizacao, fisico, passe, velocidade, defesa)
 VALUES
