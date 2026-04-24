@@ -154,11 +154,43 @@ p{
     transition: all 0.3s ease;
 }
 
+.box-player-add{
+    display: flex;
+    width: 200px;
+    border: 3px gold solid;
+    flex-direction: column;
+    max-width: fit-content;
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.3s ease;
+}
+
+.box-player-add img{
+    filter: invert(100%) brightness(200%)
+}
+
+.box-player-add:hover{
+    background-color: gold;
+    transform: scale(1.05);
+    border: black solid 3px;
+    cursor: pointer;
+}
+
+.box-player-add:hover p{
+    color: black;
+    transition: all 0.3 ease;
+}
+
 .box-player:hover{
     background-color: gold;
     transform: scale(1.05);
     border: black solid 3px;
     cursor: pointer;
+}
+
+.box-player-add:hover img{
+    filter: invert(100%) brightness(0%);
+    transition: all 0.3 ease;
 }
 
 .box-player:hover p{
