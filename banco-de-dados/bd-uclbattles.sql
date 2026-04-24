@@ -6,12 +6,12 @@ CREATE TABLE jogador_mockado(
   id_mockado INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(100) NOT NULL,
   posicao VARCHAR(40),
-  drible INT,
-  finalizacao INT,
-  fisico INT,
-  passe INT,
-  velocidade INT,
-  defesa INT,
+  drible INT NOT NULL,
+  finalizacao INT NOT NULL,
+  fisico INT NOT NULL,
+  passe INT NOT NULL,
+  velocidade INT NOT NULL,
+  defesa INT NOT NULL,
   PRIMARY KEY (id_mockado));
 
 CREATE TABLE stats_player(
@@ -31,11 +31,15 @@ CREATE TABLE user(
   email VARCHAR(200) NOT NULL UNIQUE,
   senha VARCHAR(100) NOT NULL,
   fk_stats INT NOT NULL,
-  papel_user INT NOT NULL,
-  PRIMARY KEY (id, papel_user),
+  papel_user INT,
+  PRIMARY KEY (id),
   CONSTRAINT fk_user_stats
     FOREIGN KEY (fk_stats)
-    REFERENCES uclbattles.stats_player(id_stats));
+    REFERENCES stats_player(id_stats),
+  CONSTRAINT fk_papel_user
+    FOREIGN KEY (papel_user)
+    REFERENCES user(id)
+);
     
 INSERT INTO jogador_mockado 
 (id_mockado, nome, posicao, drible, finalizacao, fisico, passe, velocidade, defesa)
