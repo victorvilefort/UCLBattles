@@ -31,14 +31,13 @@ CREATE TABLE user(
   email VARCHAR(200) NOT NULL UNIQUE,
   senha VARCHAR(100) NOT NULL,
   fk_stats INT NOT NULL,
-  papel_user INT,
+  papel_user VARCHAR(20),
   PRIMARY KEY (id),
   CONSTRAINT fk_user_stats
     FOREIGN KEY (fk_stats)
     REFERENCES stats_player(id_stats),
-  CONSTRAINT fk_papel_user
-    FOREIGN KEY (papel_user)
-    REFERENCES user(id)
+  CONSTRAINT chk_papel_user
+    CHECK (papel_user IN ('admin', 'common_user'))
 );
     
 INSERT INTO jogador_mockado 
@@ -52,4 +51,5 @@ VALUES
 (6, 'Harry Kane', 'Atacante', 83, 93, 83, 84, 69, 49),
 (7, 'Lamine Yamal', 'Atacante', 82, 68, 48, 72, 81, 30),
 (8, 'Olise', 'Meia-atacante', 82, 73, 55, 78, 79, 40);
+
 
