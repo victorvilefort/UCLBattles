@@ -197,6 +197,17 @@
         emailServer: emailVar,
         senhaServer: senhaVar,
         senhaConfVarServer: senhaConfVar,
+      }),
+    })
+
+    fetch("/stats/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/stats.js
         posicaoServer: posicaoVar,
         dribleServer: dribleVar,
         finalizacaoServer: finalizacaoVar,
