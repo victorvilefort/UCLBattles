@@ -52,7 +52,7 @@ p{
 .header{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     margin: 0;
     padding: 6px;
     align-items: center;
