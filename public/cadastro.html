@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/cadastro.css">
 </head>
+
 <body>
     <div class="navbar">
         <div class="logo">
@@ -18,204 +20,83 @@
         <a href="home.html"><button>Página Inicial</button></a>
     </div>
     <div class="main">
-    
-    <div class="title">
-        <h1>Criar Jogador</h1>
-        <p>Preencha seus dados</p>
-    </div>
+
+        <div class="title">
+            <h1>Criar Jogador</h1>
+            <p>Preencha seus dados</p>
+        </div>
         <div class="text-card">
             <p>⚡ Crie seu perfil e compare suas habilidades com os melhores do mundo!</p>
         </div>
         <div class="form">
             <div class="field-group">
-            <div class="field">
-                <p>Nome:</p>
-                <input type="text" id="ipt_nome" placeholder="Seu nome"> 
-            </div>
+                <div class="field">
+                    <p>Nome:</p>
+                    <input type="text" id="ipt_nome" placeholder="Seu nome">
+                </div>
 
-            <div class="field">
-                <p>Posição:</p>
-                <input type="text" id="ipt_posicao" placeholder="MEI / ATA / ZAG">
-            </div>
+                <div class="field">
+                    <p>Posição:</p>
+                    <input type="text" id="ipt_posicao" placeholder="MEI / ATA / ZAG">
+                </div>
 
-            <div class="field">
-                <p>Email:</p>
-                <input type="text" id="ipt_email" placeholder="seuemail@exemplo.com">
-            </div>
+                <div class="field">
+                    <p>Email:</p>
+                    <input type="text" id="ipt_email" placeholder="seuemail@exemplo.com">
+                </div>
 
-            <div class="field">
-                <p>Senha:</p>
-                <input type="password" id="ipt_senha" placeholder="*******">
-            </div>
+                <div class="field">
+                    <p>Senha:</p>
+                    <input type="password" id="ipt_senha" placeholder="*******">
+                </div>
 
-            <div class="field">
-                <p>Confirmar Senha:</p>
-                <input type="password" id="ipt_senhaConf" placeholder="*******">
+                <div class="field">
+                    <p>Confirmar Senha:</p>
+                    <input type="password" id="ipt_senhaConf" placeholder="*******">
+                </div>
             </div>
+            <div class="stats-text">
+                <p>Stats do jogador (0-99)</p>
+            </div>
+            <div class="form-player">
+                <div class="field">
+                    <p>Drible:</p>
+                    <input type="text" id="ipt_dri" placeholder="85">
+                </div>
+
+                <div class="field">
+                    <p>Finalização:</p>
+                    <input type="text" id="ipt_fin" placeholder="78">
+                </div>
+
+                <div class="field">
+                    <p>Físico:</p>
+                    <input type="text" id="ipt_fis" placeholder="72">
+                </div>
+
+                <div class="field">
+                    <p>Passe:</p>
+                    <input type="text" id="ipt_pas" placeholder="80">
+                </div>
+
+                <div class="field">
+                    <p>Velocidade:</p>
+                    <input type="text" id="ipt_vel" placeholder="88">
+                </div>
+
+                <div class="field">
+                    <p>Defesa:</p>
+                    <input type="text" id="ipt_def" placeholder="45">
+                </div>
+            </div>
+            <div class="button-create">
+                <button onclick="cadastrar()">Criar conta e Jogar</button>
+            </div>
+            <span>Já tem conta? <a href="login.html">Fazer login</a></span>
         </div>
-        <div class="stats-text">
-            <p>Stats do jogador (0-99)</p>
-        </div>
-        <div class="form-player">
-            <div class="field">
-                <p>Drible:</p>
-                <input type="text" id="ipt_dri" placeholder="85">
-            </div>
-
-            <div class="field">
-                <p>Finalização:</p>
-                <input type="text" id="ipt_fin" placeholder="78">
-            </div>
-
-            <div class="field">
-                <p>Físico:</p>
-                <input type="text" id="ipt_fis" placeholder="72">
-            </div>
-
-            <div class="field">
-                <p>Passe:</p>
-                <input type="text" id="ipt_pas" placeholder="80">
-            </div>
-
-            <div class="field">
-                <p>Velocidade:</p>
-                <input type="text" id="ipt_vel" placeholder="88">
-            </div>
-
-            <div class="field">
-                <p>Defesa:</p>
-                <input type="text" id="ipt_def" placeholder="45">
-            </div>
-        </div>
-        <div class="button-create">
-            <button onclick="createAccount()">Criar conta e Jogar</button>
-        </div>
-        <span>Já tem conta? <a href="login.html">Fazer login</a></span>
+        <script src="js/cadastro.js"></script>
     </div>
-    <script src="js/cadastro.js"></script>
-</div>
-</div>
-</div>
+    </div>
+    </div>
 </body>
 </html>
-
-<script>
-  let listaEmpresasCadastradas = [];
-
-  function cadastrar() {
-    // aguardar();
-
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
-    var nomeVar = ipt_nome.value;
-    var emailVar = ipt_email.value;
-    var senhaVar = ipt_senha.value;
-    var senhaConfVar = ipt_senhaConf.value;
-    var posicaoVar = ipt_posicao.value;
-    var dribleVar = ipt_dri.value;
-    var finalizacaoVar = ipt_fin.value;
-    var fisicoVar =  ipt_fis.value;
-    var passeVar = ipt_pas.value;
-    var velocidadeVar =  ipt_vel.value
-    var defesaVar = ipt_def.value
-
-    if(!nomeVar || !posicaoVar || !emailVar || !senhaVar || !senhaConfVar){
-        alert("Preencha todos os campos")
-        return;
-    }
-
-    let emailRgx =  /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(!emailRgx.test(emailVar)){
-        alert ("Email Inválido")
-        return;
-    }
-
-    if(senhaVar.length < 5){
-        alert("Sua senha precisa de mais que 5 caracteres")
-        return;
-    }
-
-    if(senhaVar != senhaConfVar){
-        alert("Suas Senhas não coincidem")
-        return;
-    }
-
-    let posicoesValidas = ["GOL","ZAG","LD","LE","VOL","MC","MEI","PD","ATA","PE"]
-    let posicaoEncontrada = false;
-
-    for (let i = 0; i < posicoesValidas.length; i++) {
-        if(posicaoVar.toUpperCase() === posicoesValidas[i]){
-            posicaoEncontrada = true
-            break;
-        } 
-    }
-
-    if(!posicaoEncontrada){
-        alert ("Posicão Inválida ")
-        return;
-    }
-    
-    if(dribleVar < 0 || dribleVar > 99){
-     alert("Drible deve estar entre 0 e 99!");
-     return;
-    }
-      if(finalizacaoVar < 0 || finalizacaoVar > 99){
-     alert("Finalização deve estar entre 0 e 99!");
-     return;
-    }
-      if(fisicoVar < 0 || fisicoVar > 99){
-     alert("Fisico deve estar entre 0 e 99!");
-     return;
-    }
-      if(passeVar < 0 || passeVar > 99){
-     alert("Passe deve estar entre 0 e 99!");
-     return;
-    }
-      if(velocidadeVar < 0 || velocidadeVar > 99){
-     alert("Velocidade deve estar entre 0 e 99!");
-     return;
-    }
-      if(defesaVar < 0 || defesaVar > 99){
-     alert("Defesa deve estar entre 0 e 99!");
-     return;
-    }
-
-    alert("Conta criada com sucesso!")
-    window.location.href = "login.html"
-}
-
-    // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        nomeServer: nomeVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar,
-        senhaConfVarServer: senhaConfVar,
-      }),
-    })
-
-    fetch("/stats/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/stats.js
-        posicaoServer: posicaoVar,
-        dribleServer: dribleVar,
-        finalizacaoServer: finalizacaoVar,
-        fisicoServer: fisicoVar,
-        passeServer: passeVar,
-        velocidadeServer: velocidadeServer,
-        defesaServer: defesaVar
-      }),
-    })
-</script>
-</script>
