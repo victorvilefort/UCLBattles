@@ -59,4 +59,12 @@ VALUES
 (7, 'Lamine Yamal', 'Atacante', 82, 68, 48, 72, 81, 30),
 (8, 'Olise', 'Meia-atacante', 82, 73, 55, 78, 79, 40);
 
+-- SELECT QUE OBTÉM O OVERAL(MÉDIA)
+SELECT
+    jm.nome,
+    ROUND((jm.drible + jm.finalizacao + jm.fisico + jm.passe + jm.velocidade + jm.defesa) / 6.0) as OVERAL
+FROM jogador_mockado jm
+WHERE jm.id_mockado = 1
+GROUP BY jm.nome;
+
 
