@@ -18,27 +18,27 @@
         var defesaVar = ipt_def.value
 
         if (!nomeVar || !posicaoVar || !emailVar || !senhaVar || !senhaConfVar) {
-            alert("Preencha todos os campos")
+            document.getElementById("div_erro").innerHTML = `PREENCHA TODOS OS CAMPOS`
             return;
         }
 
         let emailRgx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRgx.test(emailVar)) {
-            alert("Email Inválido")
+            document.getElementById("div_erro").innerHTML = `EMAIL INVÁLIDO`
             return;
         }
 
         if (senhaVar.length < 5) {
-            alert("Sua senha precisa de mais que 5 caracteres")
+            document.getElementById("div_erro").innerHTML = `SENHA FRACA`
             return;
         }
 
         if (senhaVar != senhaConfVar) {
-            alert("Suas Senhas não coincidem")
+            document.getElementById("div_erro").innerHTML = `AS SENHAS NÃO COINCIDEM`
             return;
         }
 
-        let posicoesValidas = ["GOL", "ZAG", "LD", "LE", "VOL", "MC", "MEI", "PD", "ATA", "PE"]
+        let posicoesValidas = ["ZAG", "LD", "LE", "VOL", "MC", "MEI", "PD", "ATA", "PE"]
         let posicaoEncontrada = false;
 
         for (let i = 0; i < posicoesValidas.length; i++) {
@@ -49,32 +49,33 @@
         }
 
         if (!posicaoEncontrada) {
-            alert("Posicão Inválida ")
+            document.getElementById("div_erro").innerHTML = `POSIÇÃO INVÁLIDA <br> POSIÇÕES VÁLIDAS: ZAG, LD, LE, VOL, MC, MEI, PD, ATA, PE`
             return;
         }
 
-        if (dribleVar < 0 || dribleVar > 99) {
-            alert("Drible deve estar entre 0 e 99!");
+        if (dribleVar <= 0 || dribleVar > 99) {
+            document.getElementById("div_erro").innerHTML = "DRIBLE DEVE ESTAR ENTRE 1 E 99!";
             return;
         }
-        if (finalizacaoVar < 0 || finalizacaoVar > 99) {
-            alert("Finalização deve estar entre 0 e 99!");
+        if (finalizacaoVar <= 0 || finalizacaoVar > 99) {
+            document.getElementById("div_erro").innerHTML = "FINALIZAÇÃO DEVE ESTAR ENTRE 1 E 99!";
             return;
         }
-        if (fisicoVar < 0 || fisicoVar > 99) {
-            alert("Fisico deve estar entre 0 e 99!");
+        if (fisicoVar <= 0 || fisicoVar > 99) {
+            document.getElementById("div_erro").innerHTML = "FÍSICO DEVE ESTAR ENTRE 1 E 99!";
             return;
         }
-        if (passeVar < 0 || passeVar > 99) {
-            alert("Passe deve estar entre 0 e 99!");
+        if (passeVar <= 0 || passeVar > 99) {
+            document.getElementById("div_erro").innerHTML = "PASSE DEVE ESTAR ENTRE 1 E 99!";
             return;
         }
-        if (velocidadeVar < 0 || velocidadeVar > 99) {
-            alert("Velocidade deve estar entre 0 e 99!");
+        if (velocidadeVar <= 0 || velocidadeVar > 99) {
+            document.getElementById("div_erro").innerHTML = "VELOCIDADE DEVE ESTAR ENTRE 1 E 99!";
             return;
         }
-        if (defesaVar < 0 || defesaVar > 99) {
-            alert("Defesa deve estar entre 0 e 99!");
+        
+        if (defesaVar <= 0 || defesaVar > 99) {
+            document.getElementById("div_erro").innerHTML =  "DEFESA DEVE ESTAR ENTRE 1 E 99!";
             return;
         }
 
