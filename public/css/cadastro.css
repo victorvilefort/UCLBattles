@@ -78,13 +78,14 @@ span {
 .logo img{
     width: 50px;
     height: auto;
-    filter: invert(100%) brightness(200%)
+    filter: invert(100%) brightness(200%);
 }
 
 .logo p{
     color: white;
     font-size: 30px;
     font-family: 'Bebas Neue', cursive;
+    cursor: pointer;
 }
 
 .navbar button{
@@ -183,7 +184,7 @@ span {
 }
 
 .field-group input::placeholder{
-    color: #ffffff
+    color: #ffffff4c
 }
 
 .form-player input {
@@ -192,12 +193,12 @@ span {
     border-radius: 5px;
     background-color: rgba(0, 13, 97, 0.201);
     font-family: 'Rajdhani', sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 15px;
 }
 
 .form-player input::placeholder{
-    color: #ffffff;
+    color: #ffffff4c;
 }
 
 .form{ 
