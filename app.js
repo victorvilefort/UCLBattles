@@ -15,7 +15,7 @@ var HOST_APP = process.env.APP_HOST;
 
 var app = express();
 
-var homeRouter = require("./src/routes/home");
+var homeRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
 
 
