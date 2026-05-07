@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UCLBattles | Main</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
   </head>
   <body>
@@ -12,7 +12,7 @@
       <div class="header">
         <div class="logo">
           <img src="assets/img/UEFA_Champions_League.png" alt="" />
-          <a href="home.html"><h1>UCLBattles</h1></a>
+          <a href="index.html"><h1>UCLBattles</h1></a>
         </div>
       </div>
       <div class="text-enemy">
@@ -77,12 +77,14 @@
         <h2>Comparativo ao vivo</h2>
       </div>
       <div class="pvp">
+
         <div class="box-player-big-blue">
         <img src="assets/img/white-user-member-guest-icon-png-image-701751695037005zdurfaim0y.png" alt="" />
           <div class="name-enemy" id="username"><p>Hero</p></div>
-          <div class="enemy-position"><p>Hero</p></div>
-          <div class="enemy-overal-big"><h2>X</h2></div>
+          <div class="enemy-position" id="user_position"><p>Hero</p></div>
+          <div class="enemy-overal-big" id="user_overal"><h2>X</h2></div>
         </div>
+
         <div class="banner-info-diff">
           <span>Diferença geral</span>
           <h3>-11 pontos</h3>
@@ -148,7 +150,24 @@
             }
           }
         }
-      });
+      });    
+
+      function carregarInfos(){
+        
+        let nomeUsuario = sessionStorage.NOME_USUARIO;
+        let posicaoUsuario = sessionStorage.POSICAO_USUARIO;
+        let overalUsuario = sessionStorage.OVERAL_USUARIO;
+
+        document.getElementById('username' ).innerHTML = `<p>${nomeUsuario}</p>`;
+        document.getElementById('user_position').innerHTML = `<p>${posicaoUsuario}</p>`;
+        document.getElementById('user_overal').innerHTML = `<h2>${overalUsuario}</h2>`;
+
+        console.log(nome)
+        console.log(posicao)
+        console.log(overal)
+      }
+      carregarInfos()
+
     </script>
   </body>
 </html>

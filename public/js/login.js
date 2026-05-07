@@ -24,7 +24,7 @@
                 sessionStorage.NOME_USUARIO = json.nome;
                 sessionStorage.ID_USUARIO = json.id;
                 sessionStorage.POSICAO_USUARIO = json.posicao;
-                sessionStorage.OVERAL_USUARIO = json.Overal
+                sessionStorage.OVERAL_USUARIO = json.overal;
                 alert("Login realizado com sucesso!");
                 window.location.href = "dashboard.html";
             });
