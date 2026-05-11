@@ -19,53 +19,53 @@
         <h2>Selecione seu adversário</h2>
       </div>
       <div class="enemy">
-        <div class="box-player">
+        <div class="box-player" onclick="buscarPorId(1)">
           <img src="assets/img/messi.png" alt="" />
           <div class="name-enemy"><p>Lionel Messi</p></div>
           <div class="enemy-position"><p>Meia-Atacante</p></div>
-          <div class="enemy-overal"><h2>93</h2></div>
+          <div class="enemy-overal"><h2>75</h2></div>
         </div>
-        <div class="box-player">
+        <div class="box-player" onclick="buscarPorId(2)">
           <img src="assets/img/cr7.png" alt="" />
           <div class="name-enemy"><p>Ronaldo</p></div>
           <div class="enemy-position"><p>Atacante</p></div>
-          <div class="enemy-overal"><h2>90</h2></div>
+          <div class="enemy-overal"><h2>72</h2></div>
         </div>
-        <div class="box-player">
+        <div class="box-player" onclick="buscarPorId(3)">
           <img src="assets/img/mbappe.png" alt="" />
           <div class="name-enemy"><p>Mbappé</p></div>
           <div class="enemy-position"><p>Atacante</p></div>
-          <div class="enemy-overal"><h2>90</h2></div>
+          <div class="enemy-overal"><h2>79</h2></div>
         </div>
-        <div class="box-player">
+        <div class="box-player" onclick="buscarPorId(4)">
           <img src="assets/img/suarez.png" alt="" />
           <div class="name-enemy"><p>Suarez</p></div>
           <div class="enemy-position"><p>Atacante</p></div>
-          <div class="enemy-overal"><h2>89</h2></div>
+          <div class="enemy-overal"><h2>74</h2></div>
         </div>
-        <div class="box-player">
+        <div class="box-player" onclick="buscarPorId(5)">
           <img src="assets/img/neymar.png" alt="" />
           <div class="name-enemy"><p>Neymar</p></div>
           <div class="enemy-position"><p>Meia-Atacante</p></div>
-          <div class="enemy-overal"><h2>91</h2></div>
+          <div class="enemy-overal"><h2>75</h2></div>
         </div>
-        <div class="box-player">
+        <div class="box-player" onclick="buscarPorId(6)">
           <img src="assets/img/kane.png" alt="" />
           <div class="name-enemy"><p>Harry Kane</p></div>
           <div class="enemy-position"><p>Atacante</p></div>
-          <div class="enemy-overal"><h2>87</h2></div>
+          <div class="enemy-overal"><h2>77</h2></div>
         </div>
-        <div class="box-player">
+        <div class="box-player" onclick="buscarPorId(7)">
           <img src="assets/img/yamal.png" alt="" />
           <div class="name-enemy"><p>Lamine Yamal</p></div>
           <div class="enemy-position"><p>Meia-Atacante</p></div>
-          <div class="enemy-overal"><h2>86</h2></div>
+          <div class="enemy-overal"><h2>64</h2></div>
         </div>
-        <div class="box-player">
+        <div class="box-player" onclick="buscarPorId(8)">
           <img src="assets/img/olise.png" alt="" />
           <div class="name-enemy"><p>Olise</p></div>
           <div class="enemy-position"><p>Meia-Atacante</p></div>
-          <div class="enemy-overal"><h2>87</h2></div>
+          <div class="enemy-overal"><h2>68</h2></div>
         </div>
         <div class="box-player-add">
           <img src="assets/img/addplayer.png" alt="" />
@@ -99,11 +99,12 @@
           <span>Melhor em</span>
           <h3>Velocidade, físico, defesa</h3>
         </div>
+        
         <div class="box-player-big-red">
-          <img src="assets/img/olise.png" alt="" />
-          <div class="name-enemy"><p>Olise</p></div>
-          <div class="enemy-position"><p>Meia-Atacante</p></div>
-          <div class="enemy-overal-big"><h2>87</h2></div>
+          <img id="enemy-foto"/>
+          <div class="name-enemy"><p></p></div>
+          <div class="enemy-position"><p></p></div>
+          <div class="enemy-overal-big"><h2></h2></div>
         </div>
       </div>
    
@@ -168,10 +169,10 @@
   </div>
 </div>
   <div class="footer">
-            <h5>UCLBATTLES</h5>
-            <a href="https://github.com/vilefxrt" target="_blank"><img src="assets/img/github.png" alt=""></a>
-            <a href="https://www.instagram.com/vilefxrt/" target="_blank"><img src="assets/img/instagram-new.png" alt=""></a>
-        </div>
+    <h5>UCLBATTLES</h5>
+       <a href="https://github.com/vilefxrt" target="_blank"><img src="assets/img/github.png" alt=""></a>
+       <a href="https://www.instagram.com/vilefxrt/" target="_blank"><img src="assets/img/instagram-new.png" alt=""></a>
+  </div>
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -228,10 +229,26 @@
         document.getElementById('user_position').innerHTML = `<p>${posicaoUsuario}</p>`;
         document.getElementById('user_overal').innerHTML = `<h2>${overalUsuario}</h2>`;
 
-        console.log(nome)
-        console.log(posicao)
-        console.log(overal)
+        console.log(nomeUsuario)
+        console.log(posicaoUsuario)
+        console.log(overalUsuario)
       }
+
+      function buscarPorId(id) {
+     fetch(`/mockPlayer/buscar/${id}`)
+      .then((res) => res.json())
+      .then((jogador) => {
+      console.log("Jogador selecionado:", jogador);
+
+      document.querySelector(".box-player-big-red img").src = `assets/img/${jogador.foto}`;
+      document.querySelector(".box-player-big-red .name-enemy p").textContent = jogador.nome;
+      document.querySelector(".box-player-big-red .enemy-position p").textContent = jogador.posicao;
+      document.querySelector(".box-player-big-red .enemy-overal-big h2").textContent = jogador.overall;
+      document.querySelector(".box-player-big-red .enemy-overal h2").textContent = jogador.overall;
+      document.getElementById('enemy-foto').src = `assets/img/${jogador.foto}`;
+    })
+    .catch((err) => console.error("Erro ao buscar jogador:", err));
+}
       carregarInfos()
 
     </script>

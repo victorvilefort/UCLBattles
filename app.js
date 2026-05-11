@@ -17,6 +17,7 @@ var app = express();
 
 var homeRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
+var mockPlayerRouter = require("./src/routes/mockPlayer")
 
 
 app.use(express.json());
@@ -27,6 +28,7 @@ app.use(cors());
 
 app.use("/", homeRouter);
 app.use("/usuarios", usuarioRouter);
+app.use("/mockPlayer", mockPlayerRouter)
 
 app.listen(PORTA_APP, function () {
     console.log(`

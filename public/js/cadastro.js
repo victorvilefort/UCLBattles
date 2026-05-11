@@ -1,6 +1,4 @@
-    let listaEmpresasCadastradas = [];
-
-    function cadastrar() {
+        function cadastrar() {
         // aguardar();
 
         //Recupere o valor da nova input pelo nome do id
