@@ -15,6 +15,17 @@ CREATE TABLE jogador_mockado(
   defesa INT NOT NULL,
   PRIMARY KEY (id_mockado));
 
+-- Alteração da tabela para guardar as fotos dos jogadores mockados
+ALTER TABLE jogador_mockado ADD COLUMN foto VARCHAR(100);
+UPDATE jogador_mockado SET foto = 'messi.png' WHERE id_mockado = 1;
+UPDATE jogador_mockado SET foto = 'cr7.png' WHERE id_mockado = 2;
+UPDATE jogador_mockado SET foto = 'mbappe.png' WHERE id_mockado = 3;
+UPDATE jogador_mockado SET foto = 'suarez.png' WHERE id_mockado = 4;
+UPDATE jogador_mockado SET foto = 'neymar.png' WHERE id_mockado = 5;
+UPDATE jogador_mockado SET foto = 'kane.png' WHERE id_mockado = 6;
+UPDATE jogador_mockado SET foto = 'yamal.png' WHERE id_mockado = 7;
+UPDATE jogador_mockado SET foto = 'olise.png' WHERE id_mockado = 8;
+
 -- TABELA QUE CONTÉM OS STATS DO JOGADOR DO USUÁRIO
 
 CREATE TABLE stats_player(
