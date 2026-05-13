@@ -19,49 +19,49 @@
         <h2>Selecione seu adversário</h2>
       </div>
       <div class="enemy">
-        <div class="box-player" onclick="buscarPorId(1)">
+        <div class="box-player" onclick="buscarPorId(1); registrarComparacao(1)">
           <img src="assets/img/messi.png" alt="" />
           <div class="name-enemy"><p>Lionel Messi</p></div>
           <div class="enemy-position"><p>Meia-Atacante</p></div>
           <div class="enemy-overal"><h2>75</h2></div>
         </div>
-        <div class="box-player" onclick="buscarPorId(2)">
+        <div class="box-player" onclick="buscarPorId(2); registrarComparacao(2)">
           <img src="assets/img/cr7.png" alt="" />
           <div class="name-enemy"><p>Ronaldo</p></div>
           <div class="enemy-position"><p>Atacante</p></div>
           <div class="enemy-overal"><h2>72</h2></div>
         </div>
-        <div class="box-player" onclick="buscarPorId(3)">
+        <div class="box-player" onclick="buscarPorId(3); registrarComparacao(3)">
           <img src="assets/img/mbappe.png" alt="" />
           <div class="name-enemy"><p>Mbappé</p></div>
           <div class="enemy-position"><p>Atacante</p></div>
           <div class="enemy-overal"><h2>79</h2></div>
         </div>
-        <div class="box-player" onclick="buscarPorId(4)">
+        <div class="box-player" onclick="buscarPorId(4); registrarComparacao(4)">
           <img src="assets/img/suarez.png" alt="" />
           <div class="name-enemy"><p>Suarez</p></div>
           <div class="enemy-position"><p>Atacante</p></div>
           <div class="enemy-overal"><h2>74</h2></div>
         </div>
-        <div class="box-player" onclick="buscarPorId(5)">
+        <div class="box-player" onclick="buscarPorId(5); registrarComparacao(5)">
           <img src="assets/img/neymar.png" alt="" />
           <div class="name-enemy"><p>Neymar</p></div>
           <div class="enemy-position"><p>Meia-Atacante</p></div>
           <div class="enemy-overal"><h2>75</h2></div>
         </div>
-        <div class="box-player" onclick="buscarPorId(6)">
+        <div class="box-player" onclick="buscarPorId(6); registrarComparacao(6)">
           <img src="assets/img/kane.png" alt="" />
           <div class="name-enemy"><p>Harry Kane</p></div>
           <div class="enemy-position"><p>Atacante</p></div>
           <div class="enemy-overal"><h2>77</h2></div>
         </div>
-        <div class="box-player" onclick="buscarPorId(7)">
+        <div class="box-player" onclick="buscarPorId(7); registrarComparacao(7)">
           <img src="assets/img/yamal.png" alt="" />
           <div class="name-enemy"><p>Lamine Yamal</p></div>
           <div class="enemy-position"><p>Meia-Atacante</p></div>
           <div class="enemy-overal"><h2>64</h2></div>
         </div>
-        <div class="box-player" onclick="buscarPorId(8)">
+        <div class="box-player" onclick="buscarPorId(8); registrarComparacao(8)">
           <img src="assets/img/olise.png" alt="" />
           <div class="name-enemy"><p>Olise</p></div>
           <div class="enemy-position"><p>Meia-Atacante</p></div>
@@ -131,39 +131,39 @@
     <div class="col-top3-title"><h2>Jogadores mais escolhidos</h2></div>
     <ol>
       <li class="player-row">
-        <img src="assets/img/messi.png" alt="" />
+        <img src="" alt="" />
         <div class="player-info">
-          <p class="player-name">Lionel Messi</p>
+          <p class="player-name"></p>
         </div>
-        <div class="count"><p>17x</p></div>
+        <div class="count"><p></p></div>
       </li>
       <li class="player-row">
-        <img src="assets/img/neymar.png" alt="" />
+        <img src="" alt="" />
         <div class="player-info">
-          <p class="player-name">Neymar</p>
+          <p class="player-name"></p>
         </div>
-        <div class="count"><p>12x</p></div>
+        <div class="count"><p></p></div>
       </li>
       <li class="player-row">
-        <img src="assets/img/yamal.png" alt="" />
+        <img src="" alt="" />
         <div class="player-info">
-          <p class="player-name">Lamine Yamal</p>
+          <p class="player-name"></p>
         </div>
         <div class="count"><p>8x</p></div>
       </li>
       <li class="player-row">
-        <img src="assets/img/cr7.png" alt="" />
+        <img src="" alt="" />
         <div class="player-info">
-          <p class="player-name">Ronaldo</p>
+          <p class="player-name"></p>
         </div>
-        <div class="count"><p>6x</p></div>
+        <div class="count"><p></p></div>
       </li>
       <li class="player-row">
-        <img src="assets/img/mbappe.png" alt="" />
+        <img src="" alt="" />
         <div class="player-info">
-          <p class="player-name">Mbappé</p>
+          <p class="player-name"></p>
         </div>
-        <div class="count"><p>3x</p></div>
+        <div class="count"><p></p></div>
       </li>
     </ol>
   </div>
@@ -234,7 +234,7 @@
         console.log(overalUsuario)
       }
 
-      function buscarPorId(id) {
+    function buscarPorId(id) {
      fetch(`/mockPlayer/buscar/${id}`)
       .then((res) => res.json())
       .then((jogador) => {
@@ -249,7 +249,7 @@
     })
     .catch((err) => console.error("Erro ao buscar jogador:", err));
 }
-      carregarInfos()
+    carregarInfos()
 
     </script>
   </body>

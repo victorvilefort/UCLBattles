@@ -78,4 +78,15 @@ FROM jogador_mockado jm
 WHERE jm.id_mockado = 1
 GROUP BY jm.nome;
 
+-- SELECT QUE OBTÉM O TOP 5 DE JOGADORES MAIS ESCOLHIDOS
+SELECT j.nome, j.foto, COUNT(*) AS vezes
+    FROM comparacao c
+    JOIN jogador_mockado j ON j.id_mockado = c.fk_jogador_mockado
+    GROUP BY c.fk_jogador_mockado
+    ORDER BY vezes DESC
+    LIMIT 5;
+
+-- SELECT QUE OBTÉM O TOTAL DE COMPARAÇÕES
+  SELECT COUNT(*) AS total FROM comparacao;
+
 
