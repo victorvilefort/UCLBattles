@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UCLBattles | Main</title>
     <link rel="stylesheet" href="./css/dashboard.css" />
-    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.ico"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <div class="main-content">
@@ -19,49 +23,97 @@
         <h2>Selecione seu adversário</h2>
       </div>
       <div class="enemy">
-        <div class="box-player" onclick="buscarPorId(1); registrarComparacao(1)">
+        <div
+          class="box-player"
+          onclick="
+            buscarPorId(1);
+            registrarComparacao(1);
+          "
+        >
           <img src="assets/img/messi.png" alt="" />
           <div class="name-enemy"><p>Lionel Messi</p></div>
           <div class="enemy-position"><p>Meia-Atacante</p></div>
           <div class="enemy-overal"><h2>75</h2></div>
         </div>
-        <div class="box-player" onclick="buscarPorId(2); registrarComparacao(2)">
+        <div
+          class="box-player"
+          onclick="
+            buscarPorId(2);
+            registrarComparacao(2);
+          "
+        >
           <img src="assets/img/cr7.png" alt="" />
           <div class="name-enemy"><p>Ronaldo</p></div>
           <div class="enemy-position"><p>Atacante</p></div>
           <div class="enemy-overal"><h2>72</h2></div>
         </div>
-        <div class="box-player" onclick="buscarPorId(3); registrarComparacao(3)">
+        <div
+          class="box-player"
+          onclick="
+            buscarPorId(3);
+            registrarComparacao(3);
+          "
+        >
           <img src="assets/img/mbappe.png" alt="" />
           <div class="name-enemy"><p>Mbappé</p></div>
           <div class="enemy-position"><p>Atacante</p></div>
           <div class="enemy-overal"><h2>79</h2></div>
         </div>
-        <div class="box-player" onclick="buscarPorId(4); registrarComparacao(4)">
+        <div
+          class="box-player"
+          onclick="
+            buscarPorId(4);
+            registrarComparacao(4);
+          "
+        >
           <img src="assets/img/suarez.png" alt="" />
           <div class="name-enemy"><p>Suarez</p></div>
           <div class="enemy-position"><p>Atacante</p></div>
           <div class="enemy-overal"><h2>74</h2></div>
         </div>
-        <div class="box-player" onclick="buscarPorId(5); registrarComparacao(5)">
+        <div
+          class="box-player"
+          onclick="
+            buscarPorId(5);
+            registrarComparacao(5);
+          "
+        >
           <img src="assets/img/neymar.png" alt="" />
           <div class="name-enemy"><p>Neymar</p></div>
           <div class="enemy-position"><p>Meia-Atacante</p></div>
           <div class="enemy-overal"><h2>75</h2></div>
         </div>
-        <div class="box-player" onclick="buscarPorId(6); registrarComparacao(6)">
+        <div
+          class="box-player"
+          onclick="
+            buscarPorId(6);
+            registrarComparacao(6);
+          "
+        >
           <img src="assets/img/kane.png" alt="" />
           <div class="name-enemy"><p>Harry Kane</p></div>
           <div class="enemy-position"><p>Atacante</p></div>
           <div class="enemy-overal"><h2>77</h2></div>
         </div>
-        <div class="box-player" onclick="buscarPorId(7); registrarComparacao(7)">
+        <div
+          class="box-player"
+          onclick="
+            buscarPorId(7);
+            registrarComparacao(7);
+          "
+        >
           <img src="assets/img/yamal.png" alt="" />
           <div class="name-enemy"><p>Lamine Yamal</p></div>
           <div class="enemy-position"><p>Meia-Atacante</p></div>
           <div class="enemy-overal"><h2>64</h2></div>
         </div>
-        <div class="box-player" onclick="buscarPorId(8); registrarComparacao(8)">
+        <div
+          class="box-player"
+          onclick="
+            buscarPorId(8);
+            registrarComparacao(8);
+          "
+        >
           <img src="assets/img/olise.png" alt="" />
           <div class="name-enemy"><p>Olise</p></div>
           <div class="enemy-position"><p>Meia-Atacante</p></div>
@@ -77,9 +129,11 @@
         <h2>Comparativo ao vivo</h2>
       </div>
       <div class="pvp">
-
         <div class="box-player-big-blue">
-        <img src="assets/img/white-user-member-guest-icon-png-image-701751695037005zdurfaim0y.png" alt="" />
+          <img
+            src="assets/img/white-user-member-guest-icon-png-image-701751695037005zdurfaim0y.png"
+            alt=""
+          />
           <div class="name-enemy" id="username"><p>Hero</p></div>
           <div class="enemy-position" id="user_position"><p>Hero</p></div>
           <div class="enemy-overal-big" id="user_overal"><h2>X</h2></div>
@@ -91,116 +145,126 @@
         </div>
 
         <div class="chart">
-             <canvas id="radarChart"></canvas>
+          <canvas id="radarChart"></canvas>
         </div>
-        
 
         <div class="banner-info-better">
           <span>Melhor em</span>
           <h3>Velocidade, físico, defesa</h3>
         </div>
-        
+
         <div class="box-player-big-red">
-          <img id="enemy-foto"/>
+          <img id="enemy-foto" />
           <div class="name-enemy"><p></p></div>
           <div class="enemy-position"><p></p></div>
           <div class="enemy-overal-big"><h2></h2></div>
         </div>
       </div>
-   
-  <div class="kpis">
-  <div class="col-comparacoes">
-  <div class="dash-title">
-    <img src="assets/img/UEFA_Champions_League.png" alt="">
-    <h1>UCL<span>DASHBOARD</span></h1>
-  </div>
-  <div class="comparation-card">
-     <h2>Comparações feitas</h2>
-    <div class="big-number"><p>28</p></div>
-  </div>
-    <div class="most-chosen-card">
-      <h3>⭐ O mais escolhido ⭐</h3>
-      <img src="assets/img/messi.png" alt="" />
-      <div class="mc-info">
-        <p class="mc-name">Lionel Messi</p>
+
+      <div class="kpis">
+        <div class="col-comparacoes">
+          <div class="dash-title">
+            <img src="assets/img/UEFA_Champions_League.png" alt="" />
+            <h1>UCL<span>DASHBOARD</span></h1>
+          </div>
+          <div class="comparation-card">
+            <h2>Comparações feitas</h2>
+            <div class="big-number"><p>28</p></div>
+          </div>
+          <div class="most-chosen-card">
+            <h3>⭐ O mais escolhido ⭐</h3>
+            <img src="assets/img/messi.png" alt="" />
+            <div class="mc-info">
+              <p class="mc-name">Lionel Messi</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-top3">
+          <div class="col-top3-title"><h2>Jogadores mais escolhidos</h2></div>
+          <ol>
+            <li class="player-row">
+              <img src="" alt="" />
+              <div class="player-info">
+                <p class="player-name"></p>
+              </div>
+              <div class="count"><p></p></div>
+            </li>
+            <li class="player-row">
+              <img src="" alt="" />
+              <div class="player-info">
+                <p class="player-name"></p>
+              </div>
+              <div class="count"><p></p></div>
+            </li>
+            <li class="player-row">
+              <img src="" alt="" />
+              <div class="player-info">
+                <p class="player-name"></p>
+              </div>
+              <div class="count"><p></p></div>
+            </li>
+            <li class="player-row">
+              <img src="" alt="" />
+              <div class="player-info">
+                <p class="player-name"></p>
+              </div>
+              <div class="count"><p></p></div>
+            </li>
+            <li class="player-row">
+              <img src="" alt="" />
+              <div class="player-info">
+                <p class="player-name"></p>
+              </div>
+              <div class="count"><p></p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="footer">
+        <h5>UCLBATTLES</h5>
+        <a href="https://github.com/vilefxrt" target="_blank"
+          ><img src="assets/img/github.png" alt=""
+        /></a>
+        <a href="https://www.instagram.com/vilefxrt/" target="_blank"
+          ><img src="assets/img/instagram-new.png" alt=""
+        /></a>
       </div>
     </div>
-  </div>
-
-  <div class="col-top3">
-    <div class="col-top3-title"><h2>Jogadores mais escolhidos</h2></div>
-    <ol>
-      <li class="player-row">
-        <img src="" alt="" />
-        <div class="player-info">
-          <p class="player-name"></p>
-        </div>
-        <div class="count"><p></p></div>
-      </li>
-      <li class="player-row">
-        <img src="" alt="" />
-        <div class="player-info">
-          <p class="player-name"></p>
-        </div>
-        <div class="count"><p></p></div>
-      </li>
-      <li class="player-row">
-        <img src="" alt=""/>
-        <div class="player-info">
-          <p class="player-name"></p>
-        </div>
-        <div class="count"><p></p></div>
-      </li>
-      <li class="player-row">
-        <img src="" alt=""/>
-        <div class="player-info">
-          <p class="player-name"></p>
-        </div>
-        <div class="count"><p></p></div>
-      </li>
-      <li class="player-row">
-        <img src="" alt="" />
-        <div class="player-info">
-          <p class="player-name"></p>
-        </div>
-        <div class="count"><p></p></div>
-      </li>
-    </ol>
-  </div>
-</div>
-  <div class="footer">
-    <h5>UCLBATTLES</h5>
-       <a href="https://github.com/vilefxrt" target="_blank"><img src="assets/img/github.png" alt=""></a>
-       <a href="https://www.instagram.com/vilefxrt/" target="_blank"><img src="assets/img/instagram-new.png" alt=""></a>
-  </div>
-</div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-     <script>
-      new Chart(document.getElementById('radarChart'), {
-        type: 'radar',
+    <script>
+      new Chart(document.getElementById("radarChart"), {
+        type: "radar",
         data: {
-          labels: ['Drible', 'Finalização', 'Físico', 'Passe', 'Velocidade', 'Defesa'],
+          labels: [
+            "Drible",
+            "Finalização",
+            "Físico",
+            "Passe",
+            "Velocidade",
+            "Defesa",
+          ],
           datasets: [
             {
-              label: 'Seu jogador',
+              label: "Seu jogador",
               data: [85, 80, 75, 90, 88, 70],
-              borderColor: '#FFD700',
-              backgroundColor: 'rgba(255, 215, 0, 0.15)',
-              pointBackgroundColor: '#FFD700',
+              borderColor: "#FFD700",
+              backgroundColor: "rgba(255, 215, 0, 0.15)",
+              pointBackgroundColor: "#FFD700",
               borderWidth: 2,
               pointRadius: 4,
             },
             {
-              label: 'Adversário',
+              label: "Adversário",
               data: [97, 92, 70, 94, 85, 38],
-              borderColor: '#00FFFF',
-              backgroundColor: 'rgba(0, 255, 255, 0.10)',
-              pointBackgroundColor: '#00FFFF',
+              borderColor: "#00FFFF",
+              backgroundColor: "rgba(0, 255, 255, 0.10)",
+              pointBackgroundColor: "#00FFFF",
               borderWidth: 2,
               pointRadius: 4,
-            }
-          ]
+            },
+          ],
         },
         options: {
           responsive: true,
@@ -210,42 +274,78 @@
             r: {
               min: 0,
               max: 99,
-              ticks: { stepSize: 10, backdropColor: 'transparent' },
-               grid: {
-                 color: 'rgba(255, 255, 255, 0.4)'  // <- cor das linhas da grade
-                },
-            }
-          }
-        }
-      });    
+              ticks: { stepSize: 10, backdropColor: "transparent" },
+              grid: {
+                color: "rgba(255, 255, 255, 0.4)", // <- cor das linhas da grade
+              },
+            },
+          },
+        },
+      });
 
-      function carregarInfos(){
-        
+      function carregarInfos() {
         let nomeUsuario = sessionStorage.NOME_USUARIO;
         let posicaoUsuario = sessionStorage.POSICAO_USUARIO;
         let overalUsuario = sessionStorage.OVERAL_USUARIO;
 
-        document.getElementById('username' ).innerHTML = `<p>${nomeUsuario}</p>`;
-        document.getElementById('user_position').innerHTML = `<p>${posicaoUsuario}</p>`;
-        document.getElementById('user_overal').innerHTML = `<h2>${overalUsuario}</h2>`;
+        document.getElementById("username").innerHTML = `<p>${nomeUsuario}</p>`;
+        document.getElementById("user_position").innerHTML =
+          `<p>${posicaoUsuario}</p>`;
+        document.getElementById("user_overal").innerHTML =
+          `<h2>${overalUsuario}</h2>`;
       }
 
-    function buscarPorId(id) {
-     fetch(`/mockPlayer/buscar/${id}`)
-      .then((res) => res.json())
-      .then((jogador) => {
-      console.log("Jogador selecionado:", jogador);
+      function buscarPorId(id) {
+        fetch(`/mockPlayer/buscar/${id}`)
+          .then((res) => res.json())
+          .then((jogador) => {
+            console.log("Jogador selecionado:", jogador);
 
-      document.querySelector(".box-player-big-red img").src = `assets/img/${jogador.foto}`;
-      document.querySelector(".box-player-big-red .name-enemy p").textContent = jogador.nome;
-      document.querySelector(".box-player-big-red .enemy-position p").textContent = jogador.posicao;
-      document.querySelector(".box-player-big-red .enemy-overal-big h2").textContent = jogador.overall;
-      document.querySelector(".box-player-big-red .enemy-overal h2").textContent = jogador.overall;
-      document.getElementById('enemy-foto').src = `assets/img/${jogador.foto}`;
-    })
-    .catch((err) => console.error("Erro ao buscar jogador:", err));
-}
-    carregarInfos()
+            document.querySelector(".box-player-big-red img").src =
+              `assets/img/${jogador.foto}`;
+            document.querySelector(
+              ".box-player-big-red .name-enemy p",
+            ).textContent = jogador.nome;
+            document.querySelector(
+              ".box-player-big-red .enemy-position p",
+            ).textContent = jogador.posicao;
+            document.querySelector(
+              ".box-player-big-red .enemy-overal-big h2",
+            ).textContent = jogador.overall;
+            document.querySelector(
+              ".box-player-big-red .enemy-overal h2",
+            ).textContent = jogador.overall;
+            document.getElementById("enemy-foto").src =
+              `assets/img/${jogador.foto}`;
+          })
+          .catch((err) => console.error("Erro ao buscar jogador:", err));
+      }
+
+      function registrarComparacao(id_comparacao, fk_jogador_mockado, fkUser) {
+        fetch(`/comparacao/registrar/${id_comparacao}/${fk_jogador_mockado}/${fkUser}`)
+        .then((res) => res.json());
+      }
+
+      let top5 = []
+      function listarTopCinco(){
+        fetch(`/comparacao/top-cinco`)
+        .then((res) => res.json())
+        .then((data) => {
+          top5 = data
+        })
+        .catch((error) => console.error("Erro ao buscar top 5:", error))
+      }
+
+      function mostrarTotalComparacoes(){
+        fetch(`total-comparacoes`)
+        .then((res) => res.json())
+        .then((data) =>{
+
+        })
+        .catch((error) => console.error("Nenhuma comparação feita", error))
+      }
+
+      carregarInfos();
 
     </script>
   </body>

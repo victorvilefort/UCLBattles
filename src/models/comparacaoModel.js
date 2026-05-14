@@ -1,8 +1,9 @@
 var database = require("../database/config");
 
-function registrarComparacao(idJogador) {
-  var instrucaoSql = `INSERT INTO comparacao (fk_jogador_mockado) VALUES (?)`;
-  return database.executar(instrucaoSql, [idJogador]);
+function registrarComparacao(id_comparacao, fk_jogador_mockado, fkUser) {
+  var instrucaoSql = `INSERT INTO comparacao (id_comparacao, fk_jogador_mockado, fkUser) 
+  VALUES (${id_comparacao},${fk_jogador_mockado}) WHERE fkUser = ${fkUser}`;
+  return database.executar(instrucaoSql);
 }
 
 function listarTopCinco () {
@@ -18,8 +19,8 @@ function listarTopCinco () {
 }
 
 function mostrarTotalComparacoes() {
-  var instrucaoSql = `SELECT COUNT(*) AS total FROM comparacao`;
+  var instrucaoSql = `SELECT COUNT(*) AS "Comparações Feitas" FROM comparacao`;
   return database.executar(instrucaoSql);
 }
 
-module.exports = { registrarComparacao, listarTopCinco, mostrarTotalComparacoes};
+module.exports = {registrarComparacao, listarTopCinco, mostrarTotalComparacoes};
