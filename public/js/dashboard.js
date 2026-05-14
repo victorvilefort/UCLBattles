@@ -15,7 +15,6 @@
           .then((res) => res.json())
           .then((jogador) => {
             console.log("Jogador selecionado:", jogador);
-
             document.querySelector(".box-player-big-red img").src =
               `assets/img/${jogador.foto}`;
             document.querySelector(
@@ -27,31 +26,28 @@
             document.querySelector(
               ".box-player-big-red .enemy-overal-big h2",
             ).textContent = jogador.overall;
-            document.querySelector(
-              ".box-player-big-red .enemy-overal h2",
-            ).textContent = jogador.overall;
             document.getElementById("enemy-foto").src =
               `assets/img/${jogador.foto}`;
           })
           .catch((err) => console.error("Erro ao buscar jogador:", err));
       }
 
-      function registrarComparacao(id_comparacao, fk_jogador_mockado, fkUser) {
+      function registrarComparacao(fk_jogador_mockado){
+        var fkUser = sessionStorage.ID_USUARIO
         fetch("/comparacao/registrar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                idComparacaoServer: idComparacaoVar,
-                fkJogadorMockadoServer: fkJogadorMockadoVar,
-                fkUserServer: fkUserVar
+                fkJogadorMockadoServer: fk_jogador_mockado,
+                fkUserServer: fkUser
             }),
         }).then(function (resposta) {
             if (resposta.ok) {
-                alert("Comparacão registrada com sucesso!");
+                console.log("Comparacão registrada com sucesso!");
             } else {
-                alert("Erro ao registrat a comparacao!");
+                console.log("Erro ao registrar a comparacao!");
             }
         }).catch(function (erro) {
             console.log(erro);
@@ -65,17 +61,25 @@
         .then((res) => res.json())
         .then((data) => {
           top5 = data
+          var rows = document.querySelectorAll(".player-row");
+        for (var i = 0; i < data.length; i++) {
+            rows[i].querySelector("img").src = `assets/img/${data[i].foto}`;
+            rows[i].querySelector(".player-name").textContent = data[i].nome;
+            rows[i].querySelector(".count p").textContent = data[i].vezes + "x"
+          }
         })
         .catch((error) => console.error("Erro ao buscar top 5:", error))
       }
 
       function mostrarTotalComparacoes(){
-        fetch(`total-comparacoes`)
+        fetch(`/comparacao/total-comparacoes`)
         .then((res) => res.json())
         .then((data) =>{
-
+           document.querySelector(".big-number p").textContent = data[0]["Comparações Feitas"];
         })
         .catch((error) => console.error("Nenhuma comparação feita", error))
       }
 
       carregarInfos();
+      listarTopCinco();
+      mostrarTotalComparacoes()
