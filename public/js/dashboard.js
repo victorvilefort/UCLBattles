@@ -50,13 +50,12 @@ function registrarComparacao(fk_jogador_mockado) {
 let top5 = [];
 function listarTopCinco() {
   let fkUser = sessionStorage.ID_USUARIO;
-  console.log("fkUser no frontend:", fkUser);
   fetch(`/comparacao/top-cinco?fkUser=${fkUser}`)
     .then((res) => res.json())
     .then((data) => {
       top5 = data;
       let cardTop5 = document.querySelectorAll(".player-row");
-      for (var i = 0; i < data.length; i++) {
+      for (let i = 0; i < data.length; i++) {
         cardTop5[i].querySelector("img").src = `assets/img/${data[i].foto}`;
         cardTop5[i].querySelector(".player-name").textContent = data[i].nome;
         cardTop5[i].querySelector(".count p").textContent = data[i].vezes + "x";
@@ -67,7 +66,6 @@ function listarTopCinco() {
 
 function mostrarTotalComparacoes() {
   let fkUser = sessionStorage.ID_USUARIO;
-  console.log("fkUser no frontend:", fkUser);
   fetch(`/comparacao/total-comparacoes?fkUser=${fkUser}`)
     .then((res) => res.json())
     .then((data) => {
