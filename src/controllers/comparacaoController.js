@@ -1,9 +1,9 @@
 var comparacaoModel = require("../models/comparacaoModel");
 
 function registrarComparacao(req, res) {
-    var id_comparacao = req.body.id_comparacao;
-    var fk_jogador_mockado = req.body.fk_jogador_mockado;
-    var fkUser = req.body.fkUser;
+    var id_comparacao = req.body.idComparacaoServer;
+    var fk_jogador_mockado = req.body.fkJogadorMockadoServer;
+    var fkUser = req.body.fkUserServer;
 
     if (id_comparacao == undefined) {
         res.status(400).send("id_comparacao está undefined!");
@@ -17,9 +17,9 @@ function registrarComparacao(req, res) {
                 if (resultado.length == 1) {
                     res.json(resultado[0]);
                 } else if (resultado.length == 0) {
-                    res.status(403).send("erro-legal");
+                    res.status(403).send("id_comparacao, fk_jogador_mockado ou fkUser estão undefined");
                 } else {
-                    res.status(403).send("erro-legal");
+                    res.status(400).send("Comparação registrada com sucesso!");
                 }
             }).catch(function (erro) {
                 console.log(erro);
