@@ -5,11 +5,12 @@ var instrucaoSql = `INSERT INTO comparacao (fk_jogador_mockado, fkUser) VALUES (
 return database.executar(instrucaoSql);
 }
 
-function listarTopCinco () {
+function listarTopCinco (fkUser) {
   var instrucaoSql = `
     SELECT j.nome, j.foto, COUNT(*) AS vezes
     FROM comparacao c
     JOIN jogador_mockado j ON j.id_mockado = c.fk_jogador_mockado
+    WHERE c.fkUser = ${fkUser}
     GROUP BY c.fk_jogador_mockado
     ORDER BY vezes DESC
     LIMIT 5;
@@ -17,8 +18,8 @@ function listarTopCinco () {
   return database.executar(instrucaoSql);
 }
 
-function mostrarTotalComparacoes() {
-  var instrucaoSql = `SELECT COUNT(*) AS "Comparações Feitas" FROM comparacao`;
+function mostrarTotalComparacoes(fkUser) {
+  var instrucaoSql = `SELECT COUNT(*) AS "Comparações Feitas" FROM comparacao WHERE fkUser = ${fkUser}`;
   return database.executar(instrucaoSql);
 }
 

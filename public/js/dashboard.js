@@ -57,22 +57,26 @@
 
       let top5 = []
       function listarTopCinco(){
-        fetch(`/comparacao/top-cinco`)
+        let fkUser = sessionStorage.ID_USUARIO;
+        console.log("fkUser no frontend:", fkUser);
+        fetch(`/comparacao/top-cinco?fkUser=${fkUser}`)
         .then((res) => res.json())
         .then((data) => {
           top5 = data
-          var rows = document.querySelectorAll(".player-row");
+          let cardTop5 = document.querySelectorAll(".player-row");
         for (var i = 0; i < data.length; i++) {
-            rows[i].querySelector("img").src = `assets/img/${data[i].foto}`;
-            rows[i].querySelector(".player-name").textContent = data[i].nome;
-            rows[i].querySelector(".count p").textContent = data[i].vezes + "x"
+            cardTop5[i].querySelector("img").src = `assets/img/${data[i].foto}`;
+            cardTop5[i].querySelector(".player-name").textContent = data[i].nome;
+            cardTop5[i].querySelector(".count p").textContent = data[i].vezes + "x"
           }
         })
         .catch((error) => console.error("Erro ao buscar top 5:", error))
       }
 
       function mostrarTotalComparacoes(){
-        fetch(`/comparacao/total-comparacoes`)
+        let fkUser = sessionStorage.ID_USUARIO;
+        console.log("fkUser no frontend:", fkUser);
+        fetch(`/comparacao/total-comparacoes?fkUser=${fkUser}`)
         .then((res) => res.json())
         .then((data) =>{
            document.querySelector(".big-number p").textContent = data[0]["Comparações Feitas"];

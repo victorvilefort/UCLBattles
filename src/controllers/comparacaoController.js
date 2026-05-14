@@ -26,7 +26,9 @@ function registrarComparacao(req, res) {
 }
 
 function listarTopCinco(req, res) {
-    comparacaoModel.listarTopCinco()
+    let fkUser = req.query.fkUser
+    console.log("fkUser no controller:", fkUser);
+    comparacaoModel.listarTopCinco(fkUser)
         .then((resultado) => {
             if(!resultado || resultado.length == 0){
                 return res.status(404).json("nenhuma comparação encontrada")
@@ -36,7 +38,9 @@ function listarTopCinco(req, res) {
 }
 
 function mostrarTotalComparacoes(req, res) {
-    comparacaoModel.mostrarTotalComparacoes()
+    let fkUser = req.query.fkUser
+    console.log("fkUser no controller:", fkUser);
+    comparacaoModel.mostrarTotalComparacoes(fkUser)
            .then((resultado) => {
             if(!resultado || resultado.length == 0){
                 return res.status(404).json("nenhuma comparação encontrada")
