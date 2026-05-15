@@ -260,7 +260,7 @@ p{
 .banner-info-diff{
     display: flex;
     flex-direction: column;
-    border: 4px rgb(255, 0, 0) solid;
+    border: 4px cyan solid;
     align-items: center;
     background-color: transparent;
     border-radius: 20px;
@@ -272,7 +272,7 @@ p{
 }
 
 .banner-info-diff h3{
-    color: red;
+    color: cyan;
 }
 
 .banner-info-better{

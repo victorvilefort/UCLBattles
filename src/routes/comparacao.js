@@ -14,4 +14,8 @@ router.get("/top-cinco",function (req, res){
 router.get("/total-comparacoes", function (req,res){
     comparacaoController.mostrarTotalComparacoes(req,res)
 })
+
+router.get("/diferenca-overal", function(req,res){
+    comparacaoController.buscarDiferencaOveral(req,res)
+})
 module.exports = router;

@@ -23,4 +23,9 @@ function mostrarTotalComparacoes(fkUser) {
   return database.executar(instrucaoSql);
 }
 
-module.exports = {registrarComparacao, listarTopCinco, mostrarTotalComparacoes};
+function buscarDiferencaOveral(fkUser,fk_jogador_mockado){
+  var instrucaoSql = `SELECT * FROM vw_diferenca WHERE id_usuario = ${fkUser} AND id_mockado = ${fk_jogador_mockado}`
+  return database.executar(instrucaoSql)
+}
+
+module.exports = {registrarComparacao, listarTopCinco, mostrarTotalComparacoes, buscarDiferencaOveral};

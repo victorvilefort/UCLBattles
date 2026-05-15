@@ -84,7 +84,20 @@ function mostrarMaisEscolhido() {
     })
     .catch((error) => console.error("Erro:", error));
 }
+
+function buscarDiferencaOveral(fk_jogador_mockado) {
+    var fkUser = sessionStorage.ID_USUARIO;
+    fetch(`/comparacao/diferenca-overal?fkUser=${fkUser}&fk_jogador_mockado=${fk_jogador_mockado}`)
+    .then((res) => res.json())
+    .then((data) => {
+        var diferenca = data.diferenca;
+        document.querySelector(".banner-info-diff h3").textContent = diferenca > 0 ? `+${diferenca} pontos`  : `${diferenca} pontos`;
+    })
+    .catch((erro) => console.error(erro));
+}
+
 carregarInfos();
 listarTopCinco();
 mostrarTotalComparacoes();
 mostrarMaisEscolhido();
+buscarDiferencaOveral()

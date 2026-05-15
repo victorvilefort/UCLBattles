@@ -27,7 +27,6 @@ function registrarComparacao(req, res) {
 
 function listarTopCinco(req, res) {
     let fkUser = req.query.fkUser
-    console.log("fkUser no controller:", fkUser);
     comparacaoModel.listarTopCinco(fkUser)
         .then((resultado) => {
             if(!resultado || resultado.length == 0){
@@ -39,7 +38,6 @@ function listarTopCinco(req, res) {
 
 function mostrarTotalComparacoes(req, res) {
     let fkUser = req.query.fkUser
-    console.log("fkUser no controller:", fkUser);
     comparacaoModel.mostrarTotalComparacoes(fkUser)
            .then((resultado) => {
             if(!resultado || resultado.length == 0){
@@ -49,9 +47,27 @@ function mostrarTotalComparacoes(req, res) {
         })
 }
 
+function buscarDiferencaOveral(req, res) {
+    let fkUser = req.query.fkUser;
+    let fk_jogador_mockado = req.query.fk_jogador_mockado;
+
+    comparacaoModel.buscarDiferencaOveral(fkUser, fk_jogador_mockado)
+    .then((resultado) => {
+        if (!resultado || resultado.length == 0) {
+            return res.status(404).json("Nenhum resultado encontrado");
+        }
+        return res.status(200).json(resultado[0]);
+    })
+    .catch((erro) => {
+        console.log(erro);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
 
 module.exports = {
     registrarComparacao,
     listarTopCinco,
     mostrarTotalComparacoes,
+    buscarDiferencaOveral
 };

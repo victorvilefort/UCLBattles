@@ -89,4 +89,17 @@ SELECT j.nome, j.foto, COUNT(*) AS vezes
 -- SELECT QUE OBTÉM O TOTAL DE COMPARAÇÕES
   SELECT COUNT(*) AS total FROM comparacao;
 
+-- VIEW QUE OBTÉM A DIFERENÇA DOS PONTOS
+
+CREATE VIEW vw_diferenca AS
+SELECT 
+    u.id AS id_usuario,
+    j.id_mockado AS id_mockado,
+    ROUND((sp.drible + sp.finalizacao + sp.fisico + sp.passe + sp.velocidade + sp.defesa) / 6) AS overal_usuario,
+    ROUND((j.drible + j.finalizacao + j.fisico + j.passe + j.velocidade + j.defesa) / 6) AS overal_mockado,
+    ROUND((sp.drible + sp.finalizacao + sp.fisico + sp.passe + sp.velocidade + sp.defesa) / 6) - 
+    ROUND((j.drible + j.finalizacao + j.fisico + j.passe + j.velocidade + j.defesa) / 6) AS diferenca
+FROM user u
+JOIN stats_player sp ON sp.id_stats = u.fk_stats
+JOIN jogador_mockado j;
 
