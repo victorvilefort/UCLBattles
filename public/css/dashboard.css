@@ -23,6 +23,7 @@ h2{
 }
 
 h3 {
+    font-size: 20px;
     color: gold;
      font-family: 'Bebas Neue', cursive
 }
@@ -38,10 +39,8 @@ a {
 }
 
 span {
-    padding-top: 20px;
     align-self: center;
-    font-family: 'Rajdhani', sans-serif;
-    color: rgb(255, 255, 255);
+    font-family: 'Bebas Neue', cursive
 }
 
 p{
@@ -257,40 +256,30 @@ p{
     margin: 40px;
 }
 
-.banner-info-diff{
+ .banner-info-diff{
     display: flex;
     flex-direction: column;
     border: 4px cyan solid;
     align-items: center;
     background-color: transparent;
     border-radius: 20px;
-    width: 900px;
-    height: 100px;
+    height: 120px;
+    width: 600px;
     justify-content: center;
-    margin-top: 400px;
-    margin-left: 70px;
-}
+    padding-top: 10px;
+} 
 
 .banner-info-diff h3{
     color: cyan;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 20px;
 }
 
-.banner-info-better{
-    display: flex;
-    flex-direction: column;
-    border: 4px cyan solid;
-    align-items: center;
-    background-color: transparent;
-    border-radius: 20px;
-    width: 900px;
-    height: 100px;
-    margin-top: 400px;
-    justify-content: center;
-    margin-right: 70px;
-}
-
-.banner-info-better h3{
-    color: cyan;
+.banner-info-diff span{
+    padding-top: 40px;
+    color: white;
+    font-size: 20px;
 }
 
 .box-player-big-blue{
@@ -332,7 +321,6 @@ p{
     justify-content: center;
     border: white solid 3px;
     border-radius: 100%;
-    padding: 0px;
 }
 
 .enemy-overal-big h2{
@@ -340,22 +328,21 @@ p{
     font-size: 60px;
 }
 
-
-.chart canvas{
-    display: flex;
-    justify-self: center;
-    align-self: center;
-    width: 500px;
-    height: 100px;
-    color: white;
-    margin-bottom: 250px;
-}
-
 .chart {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
+}
+
+.chart-wrapper {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    width: 1000px !important;
+    height: 600px !important;
+    padding-bottom: 20px;
 }
 
 .kpis {
@@ -413,7 +400,7 @@ p{
     display: flex;
     flex-direction: column;
     list-style: none;
-    gap: 59px;
+    gap: 60px;
 }
 
 
@@ -450,7 +437,9 @@ p{
 }
 
 .col-top3-title{
+    width: 800px;
     font-size: 25px;
+    padding-left: 30px;
 }
 
 .col-top3-title h2{
@@ -535,3 +524,4 @@ p{
     filter: invert(100%) brightness(200%);
     margin-bottom: 10px;
 }
+

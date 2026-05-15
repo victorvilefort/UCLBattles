@@ -1,296 +1,342 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UCLBattles | Main</title>
-    <link rel="stylesheet" href="./css/dashboard.css" />
-    <link
-      rel="shortcut icon"
-      href="./assets/img/favicon.ico"
-      type="image/x-icon"
-    />
-  </head>
-  <body>
-    <div class="main-content">
-      <div class="header">
-        <div class="logo">
-          <img src="assets/img/UEFA_Champions_League.png" alt="" />
-          <a href="index.html"><h1>UCLBattles</h1></a>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UCLBattles | Main</title>
+  <link rel="stylesheet" href="./css/dashboard.css" />
+  <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <div class="main-content">
+    <div class="header">
+      <div class="logo">
+        <img src="assets/img/UEFA_Champions_League.png" alt="" />
+        <a href="index.html">
+          <h1>UCLBattles</h1>
+        </a>
       </div>
-      <div class="text-enemy">
-        <h2>Selecione seu adversário</h2>
-      </div>
-      <div class="enemy">
-        <div
-          class="box-player"
-          onclick="
+    </div>
+    <div class="text-enemy">
+      <h2>Selecione seu adversário</h2>
+    </div>
+    <div class="enemy">
+      <div class="box-player" onclick="
             buscarPorId(1);
             registrarComparacao(1);
             buscarDiferencaOveral(1)
-          "
-        >
-          <img src="assets/img/messi.png" alt="" />
-          <div class="name-enemy"><p>Lionel Messi</p></div>
-          <div class="enemy-position"><p>Meia-Atacante</p></div>
-          <div class="enemy-overal"><h2>75</h2></div>
+          ">
+        <img src="assets/img/messi.png" alt="" />
+        <div class="name-enemy">
+          <p>Lionel Messi</p>
         </div>
-        <div
-          class="box-player"
-          onclick="
+        <div class="enemy-position">
+          <p>Meia-Atacante</p>
+        </div>
+        <div class="enemy-overal">
+          <h2>75</h2>
+        </div>
+      </div>
+      <div class="box-player" onclick="
             buscarPorId(2);
             registrarComparacao(2);
             buscarDiferencaOveral(2)
-          "
-        >
-          <img src="assets/img/cr7.png" alt="" />
-          <div class="name-enemy"><p>Ronaldo</p></div>
-          <div class="enemy-position"><p>Atacante</p></div>
-          <div class="enemy-overal"><h2>72</h2></div>
+          ">
+        <img src="assets/img/cr7.png" alt="" />
+        <div class="name-enemy">
+          <p>Ronaldo</p>
         </div>
-        <div
-          class="box-player"
-          onclick="
+        <div class="enemy-position">
+          <p>Atacante</p>
+        </div>
+        <div class="enemy-overal">
+          <h2>72</h2>
+        </div>
+      </div>
+      <div class="box-player" onclick="
             buscarPorId(3);
             registrarComparacao(3);
             buscarDiferencaOveral(3)
-          "
-        >
-          <img src="assets/img/mbappe.png" alt="" />
-          <div class="name-enemy"><p>Mbappé</p></div>
-          <div class="enemy-position"><p>Atacante</p></div>
-          <div class="enemy-overal"><h2>79</h2></div>
+          ">
+        <img src="assets/img/mbappe.png" alt="" />
+        <div class="name-enemy">
+          <p>Mbappé</p>
         </div>
-        <div
-          class="box-player"
-          onclick="
+        <div class="enemy-position">
+          <p>Atacante</p>
+        </div>
+        <div class="enemy-overal">
+          <h2>79</h2>
+        </div>
+      </div>
+      <div class="box-player" onclick="
             buscarPorId(4);
             registrarComparacao(4);
             buscarDiferencaOveral(4)
-          "
-        >
-          <img src="assets/img/suarez.png" alt="" />
-          <div class="name-enemy"><p>Suarez</p></div>
-          <div class="enemy-position"><p>Atacante</p></div>
-          <div class="enemy-overal"><h2>74</h2></div>
+          ">
+        <img src="assets/img/suarez.png" alt="" />
+        <div class="name-enemy">
+          <p>Suarez</p>
         </div>
-        <div
-          class="box-player"
-          onclick="
+        <div class="enemy-position">
+          <p>Atacante</p>
+        </div>
+        <div class="enemy-overal">
+          <h2>74</h2>
+        </div>
+      </div>
+      <div class="box-player" onclick="
             buscarPorId(5);
             registrarComparacao(5);
             buscarDiferencaOveral(5)
-          "
-        >
-          <img src="assets/img/neymar.png" alt="" />
-          <div class="name-enemy"><p>Neymar</p></div>
-          <div class="enemy-position"><p>Meia-Atacante</p></div>
-          <div class="enemy-overal"><h2>75</h2></div>
+          ">
+        <img src="assets/img/neymar.png" alt="" />
+        <div class="name-enemy">
+          <p>Neymar</p>
         </div>
-        <div
-          class="box-player"
-          onclick="
+        <div class="enemy-position">
+          <p>Meia-Atacante</p>
+        </div>
+        <div class="enemy-overal">
+          <h2>75</h2>
+        </div>
+      </div>
+      <div class="box-player" onclick="
             buscarPorId(6);
             registrarComparacao(6);
             buscarDiferencaOveral(6);
-          "
-        >
-          <img src="assets/img/kane.png" alt="" />
-          <div class="name-enemy"><p>Harry Kane</p></div>
-          <div class="enemy-position"><p>Atacante</p></div>
-          <div class="enemy-overal"><h2>77</h2></div>
+          ">
+        <img src="assets/img/kane.png" alt="" />
+        <div class="name-enemy">
+          <p>Harry Kane</p>
         </div>
-        <div
-          class="box-player"
-          onclick="
+        <div class="enemy-position">
+          <p>Atacante</p>
+        </div>
+        <div class="enemy-overal">
+          <h2>77</h2>
+        </div>
+      </div>
+      <div class="box-player" onclick="
             buscarPorId(7);
             registrarComparacao(7);
             buscarDiferencaOveral(7);
-          "
-        >
-          <img src="assets/img/yamal.png" alt="" />
-          <div class="name-enemy"><p>Lamine Yamal</p></div>
-          <div class="enemy-position"><p>Meia-Atacante</p></div>
-          <div class="enemy-overal"><h2>64</h2></div>
+          ">
+        <img src="assets/img/yamal.png" alt="" />
+        <div class="name-enemy">
+          <p>Lamine Yamal</p>
         </div>
-        <div
-          class="box-player"
-          onclick="
+        <div class="enemy-position">
+          <p>Meia-Atacante</p>
+        </div>
+        <div class="enemy-overal">
+          <h2>64</h2>
+        </div>
+      </div>
+      <div class="box-player" onclick="
             buscarPorId(8);
             registrarComparacao(8);
             buscarDiferencaOveral(8);
-          "
-        >
-          <img src="assets/img/olise.png" alt="" />
-          <div class="name-enemy"><p>Olise</p></div>
-          <div class="enemy-position"><p>Meia-Atacante</p></div>
-          <div class="enemy-overal"><h2>68</h2></div>
+          ">
+        <img src="assets/img/olise.png" alt="" />
+        <div class="name-enemy">
+          <p>Olise</p>
         </div>
-        <div class="box-player-add">
-          <img src="assets/img/addplayer.png" alt="" />
-          <div class="name-enemy"><p>Cadastrar Jogador</p></div>
+        <div class="enemy-position">
+          <p>Meia-Atacante</p>
+        </div>
+        <div class="enemy-overal">
+          <h2>68</h2>
+        </div>
+      </div>
+      <div class="box-player-add">
+        <img src="assets/img/addplayer.png" alt="" />
+        <div class="name-enemy">
+          <p>Cadastrar Jogador</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="title-pvp">
+      <h2>Comparativo ao vivo</h2>
+    </div>
+    <div class="pvp">
+      <div class="box-player-big-blue">
+        <img src="assets/img/white-user-member-guest-icon-png-image-701751695037005zdurfaim0y.png" alt="" />
+        <div class="name-enemy" id="username">
+          <p>Hero</p>
+        </div>
+        <div class="enemy-position" id="user_position">
+          <p>Hero</p>
+        </div>
+        <div class="enemy-overal-big" id="user_overal">
+          <h2>X</h2>
         </div>
       </div>
 
-      <div class="title-pvp">
-        <h2>Comparativo ao vivo</h2>
-      </div>
-      <div class="pvp">
-        <div class="box-player-big-blue">
-          <img
-            src="assets/img/white-user-member-guest-icon-png-image-701751695037005zdurfaim0y.png"
-            alt=""
-          />
-          <div class="name-enemy" id="username"><p>Hero</p></div>
-          <div class="enemy-position" id="user_position"><p>Hero</p></div>
-          <div class="enemy-overal-big" id="user_overal"><h2>X</h2></div>
-        </div>
 
+      <div class="chart">
+        <div class="chart-wrapper">
+          <canvas id="radarChart"></canvas>
+        </div>
         <div class="banner-info-diff">
           <span>Diferença geral</span>
           <h3></h3>
         </div>
-
-        <div class="chart">
-          <canvas id="radarChart"></canvas>
-        </div>
-
-        <div class="banner-info-better">
-          <span>Melhor em</span>
-          <h3>Velocidade, físico, defesa</h3>
-        </div>
-
-        <div class="box-player-big-red">
-          <img id="enemy-foto" />
-          <div class="name-enemy"><p></p></div>
-          <div class="enemy-position"><p></p></div>
-          <div class="enemy-overal-big"><h2></h2></div>
-        </div>
       </div>
 
-      <div class="kpis">
-        <div class="col-comparacoes">
-          <div class="dash-title">
-            <img src="assets/img/UEFA_Champions_League.png" alt="" />
-            <h1>UCL<span>DASHBOARD</span></h1>
-          </div>
-          <div class="comparation-card">
-            <h2>Comparações feitas</h2>
-            <div class="big-number"><p></p></div>
-          </div>
-          <div class="most-chosen-card">
-            <h3>⭐ O mais escolhido ⭐</h3>
-            <img src="assets/img/messi.png" alt="" />
-            <div class="mc-info">
-              <p class="mc-name">Lionel Messi</p>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-top3">
-          <div class="col-top3-title"><h2>Jogadores mais escolhidos</h2></div>
-          <ol>
-            <li class="player-row">
-              <img src="" alt="" />
-              <div class="player-info">
-                <p class="player-name"></p>
-              </div>
-              <div class="count"><p></p></div>
-            </li>
-            <li class="player-row">
-              <img src="" alt="" />
-              <div class="player-info">
-                <p class="player-name"></p>
-              </div>
-              <div class="count"><p></p></div>
-            </li>
-            <li class="player-row">
-              <img src="" alt="" />
-              <div class="player-info">
-                <p class="player-name"></p>
-              </div>
-              <div class="count"><p></p></div>
-            </li>
-            <li class="player-row">
-              <img src="" alt="" />
-              <div class="player-info">
-                <p class="player-name"></p>
-              </div>
-              <div class="count"><p></p></div>
-            </li>
-            <li class="player-row">
-              <img src="" alt="" />
-              <div class="player-info">
-                <p class="player-name"></p>
-              </div>
-              <div class="count"><p></p></div>
-            </li>
-          </ol>
+
+      <div class="box-player-big-red">
+        <img id="enemy-foto" />
+        <div class="name-enemy">
+          <p></p>
         </div>
-      </div>
-      <div class="footer">
-        <h5>UCLBATTLES</h5>
-        <a href="https://github.com/vilefxrt" target="_blank"
-          ><img src="assets/img/github.png" alt=""
-        /></a>
-        <a href="https://www.instagram.com/vilefxrt/" target="_blank"
-          ><img src="assets/img/instagram-new.png" alt=""
-        /></a>
+        <div class="enemy-position">
+          <p></p>
+        </div>
+        <div class="enemy-overal-big">
+          <h2></h2>
+        </div>
       </div>
     </div>
 
-    <script src="js/dashboard.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-      new Chart(document.getElementById("radarChart"), {
-        type: "radar",
-        data: {
-          labels: [
-            "Drible",
-            "Finalização",
-            "Físico",
-            "Passe",
-            "Velocidade",
-            "Defesa",
-          ],
-          datasets: [
-            {
-              label: "Seu jogador",
-              data: [85, 80, 75, 90, 88, 70],
-              borderColor: "#FFD700",
-              backgroundColor: "rgba(255, 215, 0, 0.15)",
-              pointBackgroundColor: "#FFD700",
-              borderWidth: 2,
-              pointRadius: 4,
-            },
-            {
-              label: "Adversário",
-              data: [97, 92, 70, 94, 85, 38],
-              borderColor: "#00FFFF",
-              backgroundColor: "rgba(0, 255, 255, 0.10)",
-              pointBackgroundColor: "#00FFFF",
-              borderWidth: 2,
-              pointRadius: 4,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: { legend: { display: true } },
-          scales: {
-            r: {
-              min: 0,
-              max: 99,
-              ticks: { stepSize: 10, backdropColor: "transparent" },
-              grid: {
-                color: "rgba(255, 255, 255, 0.4)", // <- cor das linhas da grade
-              },
+    <div class="kpis">
+      <div class="col-comparacoes">
+        <div class="dash-title">
+          <img src="assets/img/UEFA_Champions_League.png" alt="" />
+          <h1>UCL<span>DASHBOARD</span></h1>
+        </div>
+        <div class="comparation-card">
+          <h2>Comparações feitas</h2>
+          <div class="big-number">
+            <p></p>
+          </div>
+        </div>
+        <div class="most-chosen-card">
+          <h3>⭐ O mais escolhido ⭐</h3>
+          <img src="assets/img/messi.png" alt="" />
+          <div class="mc-info">
+            <p class="mc-name">Lionel Messi</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-top3">
+        <div class="col-top3-title">
+          <h2>TOP 5 - Jogadores mais escolhidos</h2>
+        </div>
+        <ol>
+          <li class="player-row">
+            <img src="" alt="" />
+            <div class="player-info">
+              <p class="player-name"></p>
+            </div>
+            <div class="count">
+              <p></p>
+            </div>
+          </li>
+          <li class="player-row">
+            <img src="" alt="" />
+            <div class="player-info">
+              <p class="player-name"></p>
+            </div>
+            <div class="count">
+              <p></p>
+            </div>
+          </li>
+          <li class="player-row">
+            <img src="" alt="" />
+            <div class="player-info">
+              <p class="player-name"></p>
+            </div>
+            <div class="count">
+              <p></p>
+            </div>
+          </li>
+          <li class="player-row">
+            <img src="" alt="" />
+            <div class="player-info">
+              <p class="player-name"></p>
+            </div>
+            <div class="count">
+              <p></p>
+            </div>
+          </li>
+          <li class="player-row">
+            <img src="" alt="" />
+            <div class="player-info">
+              <p class="player-name"></p>
+            </div>
+            <div class="count">
+              <p></p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="footer">
+      <h5>UCLBATTLES</h5>
+      <a href="https://github.com/vilefxrt" target="_blank"><img src="assets/img/github.png" alt="" /></a>
+      <a href="https://www.instagram.com/vilefxrt/" target="_blank"><img src="assets/img/instagram-new.png"
+          alt="" /></a>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    new Chart(document.getElementById("radarChart"), {
+      type: "radar",
+      data: {
+        labels: [
+          "Drible",
+          "Finalização",
+          "Físico",
+          "Passe",
+          "Velocidade",
+          "Defesa",
+        ],
+        datasets: [
+          {
+            label: "Seu jogador",
+            data: [85, 80, 75, 90, 88, 70],
+            borderColor: "#FFD700",
+            backgroundColor: "rgba(255, 215, 0, 0.15)",
+            pointBackgroundColor: "#FFD700",
+            borderWidth: 2,
+            pointRadius: 4,
+          },
+          {
+            label: "Adversário",
+            data: [97, 92, 70, 94, 85, 38],
+            borderColor: "#00FFFF",
+            backgroundColor: "rgba(0, 255, 255, 0.10)",
+            pointBackgroundColor: "#00FFFF",
+            borderWidth: 2,
+            pointRadius: 4,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: true } },
+        scales: {
+          r: {
+            min: 0,
+            max: 99,
+            ticks: { stepSize: 10, backdropColor: "transparent" },
+            grid: {
+              color: "rgba(255, 255, 255, 0.4)", // <- cor das linhas da grade
             },
           },
         },
-      });
-    </script>
-  </body>
+      },
+    });
+  </script>
+</body>
+
 </html>
