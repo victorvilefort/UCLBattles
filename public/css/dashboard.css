@@ -336,7 +336,7 @@ p{
     color: white;
 }
 
-.chart-wrapper {
+.chart-container {
     display: flex;
     justify-self: center;
     align-self: center;
