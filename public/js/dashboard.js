@@ -87,6 +87,12 @@ function mostrarMaisEscolhido() {
 
 function buscarDiferencaOveral(fk_jogador_mockado) {
     var fkUser = sessionStorage.ID_USUARIO;
+
+    if(!fk_jogador_mockado){
+      document.querySelector(".banner-info-diff h3").textContent = "AGUARDANDO COMPARAÇÃO...";
+      return;
+    }
+
     fetch(`/comparacao/diferenca-overal?fkUser=${fkUser}&fk_jogador_mockado=${fk_jogador_mockado}`)
     .then((res) => res.json())
     .then((data) => {
@@ -96,8 +102,105 @@ function buscarDiferencaOveral(fk_jogador_mockado) {
     .catch((erro) => console.error(erro));
 }
 
+let graficoRadar = null;
+
+function obterDadosGrafico(fk_jogador_mockado) {
+    var fkUser = sessionStorage.ID_USUARIO;
+    fetch(`/dashboard/dados-grafico?fkUser=${fkUser}&fk_jogador_mockado=${fk_jogador_mockado}`)
+        .then(function (response) {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error("Nenhum dado encontrado");
+            }
+        })
+        .then(function (dados) {
+            plotarGrafico(dados);
+        })
+        .catch(function (error) {
+            console.error(`Erro ao obter dados para gráfico: ${error.message}`);
+        });
+}
+
+       function plotarGrafico(dados) {
+
+
+        if (graficoRadar) {
+          graficoRadar.destroy();
+       }
+
+        console.log('iniciando plotagem do gráfico...');
+
+        // Criando estrutura para plotar gráfico - labels
+        // Criando estrutura para plotar gráfico - dados
+      graficoRadar = new Chart(document.getElementById("radarChart"), {
+      type: "radar",
+      data: {
+        labels: [
+          "Drible",
+          "Finalização",
+          "Físico",
+          "Passe",
+          "Velocidade",
+          "Defesa",
+        ],
+        datasets: [
+          {
+            label: "Seu jogador",
+            data: [dados.user_drible,
+            dados.user_finalizacao,
+            dados.user_fisico,
+            dados.user_velocidade,
+            dados.user_passe,
+            dados.user_defesa],
+            borderColor: "#FFD700",
+            backgroundColor: "rgba(255, 215, 0, 0.15)",
+            pointBackgroundColor: "#FFD700",
+            borderWidth: 2,
+            pointRadius: 4,
+          },
+          {
+            label: "Adversário",
+            data: [dados.adv_drible,
+              dados.adv_finalizacao,
+              dados.adv_fisico,
+              dados.adv_passe,
+              dados.adv_velocidade,
+              dados.adv_defesa
+            ],
+            borderColor: "#00FFFF",
+            backgroundColor: "rgba(0, 255, 255, 0.10)",
+            pointBackgroundColor: "#00FFFF",
+            borderWidth: 2,
+            pointRadius: 4,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: true } },
+        scales: {
+          r: {
+            min: 0,
+            max: 99,
+            ticks: { stepSize: 10, backdropColor: "transparent" },
+            grid: {
+              color: "rgba(255, 255, 255, 0.4)", // <- cor das linhas da grade
+            },
+          },
+        },
+      },
+    });
+
+        console.log('----------------------------------------------')
+        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+        console.log(resposta)
+      }
+
 carregarInfos();
 listarTopCinco();
 mostrarTotalComparacoes();
 mostrarMaisEscolhido();
-buscarDiferencaOveral()
+buscarDiferencaOveral();
+obterDadosGrafico();

@@ -26,7 +26,8 @@
       <div class="box-player" onclick="
             buscarPorId(1);
             registrarComparacao(1);
-            buscarDiferencaOveral(1)
+            buscarDiferencaOveral(1);
+            obterDadosGrafico(1);
           ">
         <img src="assets/img/messi.png" alt="" />
         <div class="name-enemy">
@@ -42,7 +43,8 @@
       <div class="box-player" onclick="
             buscarPorId(2);
             registrarComparacao(2);
-            buscarDiferencaOveral(2)
+            buscarDiferencaOveral(2);
+            obterDadosGrafico(2);
           ">
         <img src="assets/img/cr7.png" alt="" />
         <div class="name-enemy">
@@ -58,7 +60,8 @@
       <div class="box-player" onclick="
             buscarPorId(3);
             registrarComparacao(3);
-            buscarDiferencaOveral(3)
+            buscarDiferencaOveral(3);
+            obterDadosGrafico(3);
           ">
         <img src="assets/img/mbappe.png" alt="" />
         <div class="name-enemy">
@@ -74,7 +77,8 @@
       <div class="box-player" onclick="
             buscarPorId(4);
             registrarComparacao(4);
-            buscarDiferencaOveral(4)
+            buscarDiferencaOveral(4);
+            obterDadosGrafico(4);
           ">
         <img src="assets/img/suarez.png" alt="" />
         <div class="name-enemy">
@@ -90,7 +94,8 @@
       <div class="box-player" onclick="
             buscarPorId(5);
             registrarComparacao(5);
-            buscarDiferencaOveral(5)
+            buscarDiferencaOveral(5);
+            obterDadosGrafico(5);
           ">
         <img src="assets/img/neymar.png" alt="" />
         <div class="name-enemy">
@@ -107,6 +112,7 @@
             buscarPorId(6);
             registrarComparacao(6);
             buscarDiferencaOveral(6);
+            obterDadosGrafico(6);
           ">
         <img src="assets/img/kane.png" alt="" />
         <div class="name-enemy">
@@ -123,6 +129,7 @@
             buscarPorId(7);
             registrarComparacao(7);
             buscarDiferencaOveral(7);
+            obterDadosGrafico(7);
           ">
         <img src="assets/img/yamal.png" alt="" />
         <div class="name-enemy">
@@ -139,6 +146,7 @@
             buscarPorId(8);
             registrarComparacao(8);
             buscarDiferencaOveral(8);
+            obterDadosGrafico(8);
           ">
         <img src="assets/img/olise.png" alt="" />
         <div class="name-enemy">
@@ -149,12 +157,6 @@
         </div>
         <div class="enemy-overal">
           <h2>68</h2>
-        </div>
-      </div>
-      <div class="box-player-add">
-        <img src="assets/img/addplayer.png" alt="" />
-        <div class="name-enemy">
-          <p>Cadastrar Jogador</p>
         </div>
       </div>
     </div>
@@ -287,56 +289,6 @@
 
   <script src="js/dashboard.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    new Chart(document.getElementById("radarChart"), {
-      type: "radar",
-      data: {
-        labels: [
-          "Drible",
-          "Finalização",
-          "Físico",
-          "Passe",
-          "Velocidade",
-          "Defesa",
-        ],
-        datasets: [
-          {
-            label: "Seu jogador",
-            data: [85, 80, 75, 90, 88, 70],
-            borderColor: "#FFD700",
-            backgroundColor: "rgba(255, 215, 0, 0.15)",
-            pointBackgroundColor: "#FFD700",
-            borderWidth: 2,
-            pointRadius: 4,
-          },
-          {
-            label: "Adversário",
-            data: [97, 92, 70, 94, 85, 38],
-            borderColor: "#00FFFF",
-            backgroundColor: "rgba(0, 255, 255, 0.10)",
-            pointBackgroundColor: "#00FFFF",
-            borderWidth: 2,
-            pointRadius: 4,
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { display: true } },
-        scales: {
-          r: {
-            min: 0,
-            max: 99,
-            ticks: { stepSize: 10, backdropColor: "transparent" },
-            grid: {
-              color: "rgba(255, 255, 255, 0.4)", // <- cor das linhas da grade
-            },
-          },
-        },
-      },
-    });
-  </script>
 </body>
 
 </html>

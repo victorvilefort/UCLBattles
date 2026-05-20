@@ -1,13 +1,8 @@
 var database = require("../database/config");
 
-function buscarStatsMockado(id_mockado){
-    var instrucaoSql = `SELECT * FROM jogador_mockado WHERE id_mockado = ${id_mockado}`
+function buscarDadosParaPlotar(fkUser, fk_jogador_mockado){
+    var instrucaoSql = `SELECT * FROM vw_grafico WHERE id = ${fkUser} AND id_mockado = ${fk_jogador_mockado}`
     return database.executar(instrucaoSql)
 }
 
-function buscarStatsUsuario(fkUser){
-    var instrucaoSql = `SELECT * FROM stats_player WHERE id_stats = ${fkUser}`
-    return database.executar(instrucaoSql)
-}
-
-module.exports = {buscarStatsMockado , buscarStatsUsuario}
+module.exports = {buscarDadosParaPlotar}
